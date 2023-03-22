@@ -1,0 +1,17 @@
+body {
+    background-image:url(bg.jpg);
+    background-size:contain;
+  }
+div{
+    margin-top: 3cm;
+    border-color: black;
+    text-align: center;
+    background:rgba(0, 0, 0, 0.5);
+  }
+  h1 {
+    text-align: center;
+    color: blue;
+  }
+  p {
+    color: red;
+  }
