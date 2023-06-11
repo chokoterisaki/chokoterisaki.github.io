@@ -1,0 +1,30 @@
+body {
+    background-image:url(nasaoffice.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+div{
+    margin-top: 1cm;
+    border-color: black;
+    text-align: center;
+    background:rgba(0, 0, 0, 0.5);
+  }
+  h1 {
+    text-align: center;
+    color: red;
+  }
+  .edd {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:xx-large;
+    color:red;
+  }
+  .aze{
+    font-size: xx-large;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:green;
+  }
+  .nia{
+    font-size: xx-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    color:yellow; 
+  }
