@@ -1,8 +1,13 @@
-body {
-    background-image:url(nasaoffice.webp);
+.index {
+    background-image:url(assets/nasaoffice.webp);
     background-repeat: no-repeat;
     background-size:cover;
   }
+.part1{
+  background-image:url(assets/outview.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 div{
     margin-top: 1cm;
     border-color: black;
@@ -11,11 +16,11 @@ div{
   }
   h1 {
     text-align: center;
-    color: red;
+    color: aquamarine;
   }
   .edd {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:red;
   }
   .aze{
@@ -27,4 +32,19 @@ div{
     font-size: xx-large;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
     color:yellow; 
+  }
+  .tea{
+    font-size: xx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(38, 114, 255);
+  }
+  .marisco{
+    font-size: xx-large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(255, 0, 255);
+  }
+  .nt{
+    font-size:large;
+    color:white;
+    font-family: fantasy;
   }
