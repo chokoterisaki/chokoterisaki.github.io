@@ -1,10 +1,10 @@
 .index {
-    background-image:url(assets/nasaoffice.webp);
+    background-image:url(assets/part1/nasaoffice.webp);
     background-repeat: no-repeat;
     background-size:cover;
   }
 .part2{
-  background-image:url(assets/outview.jpg);
+  background-image:url(assets/part2/outview.jpg);
     background-repeat: no-repeat;
     background-size:cover;
 }
