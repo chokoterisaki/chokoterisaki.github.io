@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Puerta</title>
+    <link rel="icon" href="../favicons/th08.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body class="part4">
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <style>
+      .espaciodetexto {
+        margin-top: 1cm;
+        border-color: black;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .titulo {
+        text-align: center;
+        color: aquamarine;
+      }
+    </style>
+    <div id="center">
+      <div class="gardenroom" id="gardenroom_hidden">
+        <img
+          alt="normal"
+          class="gardenroom-bg"
+          src="../assets/part4/the_door/the_door.png"
+        />
+        <button id="room"></button>
+        <button id="dazai"></button>
+        <button id="easter"></button>
+      </div>
+      <div class="0 hidden" id="0">
+        <video loop playsinline volume="0.01">
+          <source src="../assets/part4/the_door/kanade.mp4" type="video/mp4" />
+        </video>
+        Microverso 0 - Kanade (play)
+
+        <form action="the_door.html">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".0:not(.playing)", function () {
+            $(".0").addClass("playing");
+            $("video")[0].play();
+          });
+          $(document).on("click", ".0.playing", function () {
+            $(".0").removeClass("playing");
+            $("video")[0].pause();
+          });
+        </script>
+      </div>
+      <div class="1 hidden" id="1">
+        <video loop playsinline volume="0.000001">
+          <source src="../assets/part4/the_door/2414.mp4" type="video/mp4" />
+        </video>
+        Microverso 1 - twofouronefour (play)
+
+        <form action="the_door.html">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".1:not(.playing)", function () {
+            $(".1").addClass("playing");
+            $("video")[1].play();
+          });
+          $(document).on("click", ".1.playing", function () {
+            $(".1").removeClass("playing");
+            $("video")[1].pause();
+          });
+        </script>
+      </div>
+      <div class="2 hidden" id="2">
+        <img src="../assets/part4/the_door/officev2.png" />
+        Microverso 2 - Oficina nostálgica
+
+        <form action="the_door.html">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+      </div>
+      <div class="3 hidden" id="3">
+        <img src="../assets/part4/the_door/fumuji.jpg" />
+
+        <form action="the_door.html">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          var fumuji = new Howl({
+            src: ["../assets/part4/the_door/memory.ogg"],
+            volume: 0.01,
+            loop: false,
+          });
+          $(document).on("click", "#easter", function () {
+            gardenroom.play();
+          });
+        </script>
+      </div>
+      <style>
+        #room {
+          position: absolute;
+          left: 41%;
+          top: 40%;
+          width: 11%;
+          height: 22%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #dazai {
+          position: absolute;
+          left: 20%;
+          top: 37%;
+          width: 6%;
+          height: 22%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #easter {
+          position: absolute;
+          left: 92%;
+          top: 30%;
+          width: 7%;
+          height: 27%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+      </style>
+      <style>
+        .part4 {
+          padding: 0;
+          margin: 0;
+        }
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        html {
+          position: relative;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        body {
+          background-color: black;
+          color: #ffffff;
+          font-family: "8bitOperatorPlus-Bold", monospace;
+          padding: 0;
+          margin: 0;
+        }
+
+        .hidden {
+          display: none !important;
+        }
+
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        #ytand {
+          position: relative;
+          display: grid;
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+          color: #353535;
+          place-items: center center;
+        }
+
+        #ytand #image {
+          width: 100vw;
+          height: 100vh;
+          background-repeat: repeat;
+        }
+
+        #ytand #text {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 810px;
+          z-index: 10;
+          text-align: center;
+          font-family: Tahoma, sans-serif;
+        }
+
+        #ytand #text div {
+          position: absolute;
+          width: 810px;
+        }
+        .gardenroom {
+          position: relative;
+        }
+
+        .gardenroom-bg {
+          width: 100%;
+          image-rendering: pixelated;
+          pointer-events: none;
+        }
+      </style>
+      <script>
+        var RNG = Math.floor(Math.random() * 5); console.log(RNG);
+        var gardenroom = new Howl({
+          src: ["../assets/part4/the_door/memory.ogg"],
+          volume: 0.01,
+          loop: false,
+        });
+        $(document).on("click", "#easter", function () {
+          gardenroom.play();
+        });
+        $(document).on("click", "#dazai", function () {
+          alert(
+            "¡Oh, hola! Soy el portero de la Puerta de Eddschrödinger. Al entrar, tenéis una probabilidad de ir a una de las 69 posibles habitaciones. ¿Lo queréis poner a prueba?"
+          );
+        });
+        $(document).on("click", "#room", function () {
+          if (RNG == 0) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#0").removeClass("hidden");
+            document.title = "Kanadeuwu";
+          } else if (RNG == 1) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#1").removeClass("hidden");
+          } else if (RNG == 2) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#2").removeClass("hidden");
+          }
+        });
+      </script>
+    </div>
+  </body>
+</html>

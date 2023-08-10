@@ -32,21 +32,31 @@
           <button id="basura"></button>
         </div>
         <div class="gardenroom hidden" id="gardenroom">
-            <img
-              alt="Mysterious door"
-              class="gardenroom-bg"
-              src="../assets/garden/pipparoom.jpg"
-            />
-            <p>
-                ¡Listo! Volvamos al Hall.<br />BGM. Versión Muffleada de "Pipkin Pippa You Absolutely
-                Need to Take Your Medication Right Now Otherwise the Voices Will Never
-                Stop I'm Pleading With You" de Ken Ashcorp
-              </p>
-              <form action="garden.html">
-                <input type="submit" value="Volver" class="w3-button w3-red"><br><br>
-            </form>
-          </div>
+          <img
+            alt="Mysterious door"
+            class="gardenroom-bg"
+            src="../assets/garden/pipparoom.jpg"
+          />
+          <p>¡Listo! Volvamos al Hall.<br /></p>
+          <p style="color: yellow">
+            Si te encuentras en Opera/Opera GX u otro navegador que no puede
+            autoreproducir correctamente:
+          </p>
 
+          <audio controls src="../assets/garden/PPP.mp3"></audio>
+          <p>
+            BGM. Versión Muffleada de "Pipkin Pippa You Absolutely Need to Take
+            Your Medication Right Now Otherwise the Voices Will Never Stop I'm
+            Pleading With You" de Ken Ashcorp
+          </p>
+          <form action="garden.html">
+            <input
+              type="submit"
+              value="Volver"
+              class="w3-button w3-red"
+            /><br /><br />
+          </form>
+        </div>
       </div>
       <style>
         .gardenbody {
@@ -150,10 +160,10 @@
           volume: 0.2,
           loop: true,
         });
-        
+
         $(document).on("click", "#basura", function () {
-            $("#gardenroom_hidden").addClass("hidden");
-            $("#gardenroom").removeClass("hidden");
+          $("#gardenroom_hidden").addClass("hidden");
+          $("#gardenroom").removeClass("hidden");
           azeroom.play();
           alert("P");
         });

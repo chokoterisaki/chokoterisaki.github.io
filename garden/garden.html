@@ -168,9 +168,9 @@
         #gardenroom_back {
           position: absolute;
           right: 47%;
-          top: 86%;
+          top: 81%;
           width: 6%;
-          height: 14%;
+          height: 12%;
         }
         #astolfo {
           position: absolute;
@@ -237,29 +237,28 @@
         });
         $(document).on("click", "#astolfo", function () {
           alert(
-            "¡Bienvenidos al Hall del Jardín del Edén! Por favor, encuentren los 3 carácteres escondidos en cada habitación para introducirlos en la puerta frontal y acceder al laboratorio."
+            "¡Bienvenidos al Hall del Jardín del Edén! Por favor, encuentren las 3 letras escondidas en cada habitación para introducirlos en la puerta frontal y acceder al laboratorio."
           );
         });
         $(document).on("click", "#aze", function () {
-          alert("Aw. No sabia que necesitabámos contraseña");
+          alert("Aw. Yo voy por la puerta izquierda");
         });
         $(document).on("click", "#nia", function () {
-          alert("¿Qué hay en esas habitaciones?");
+          alert(":v. Yo ire por la puerta de abajo");
         });
         $(document).on("click", "#edd", function () {
-          alert("Ayps.");
+          alert("Ayps. Pues yo la de la derecha.");
         });
         $(document).on("click", "#frontdoor", function () {
-          var contraseña = prompt(
-            "¿Cuál es la palabra mágica? ¡DILO EN MAYÚSCULAS!"
-          );
+          var contraseña = prompt("¿Cuál es la contraseña? ¡EN MAYÚSCULAS!");
 
-          if (contraseña == "PTA") {
-            //OYE! ESO ES TRAMPA! Ya que estas, por lo menos escucha un poco de Ken Ashcorp.
-            //window.location.href = "eden.html";
-            alert("Bienvenido, MATI. Continuará...");
+          if (
+            contraseña == "PTA" //OYE! ESO ES TRAMPA! Ya que estas, por lo menos escucha un poco de Ken Ashcorp.
+          ) {
+            alert("✅ Bienvenido, MATI.");
+            window.location.href = "../langley/part4.html";
           } else {
-            alert("Acceso no autorizado.");
+            alert("❌ Acceso no autorizado.");
           }
         });
       </script>
@@ -270,7 +269,6 @@
         data-cf-beacon='{"rayId":"7eb472fcec40200d","version":"2023.4.0","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
         crossorigin="anonymous"
       ></script>
-     
     </main>
   </body>
 </html>
