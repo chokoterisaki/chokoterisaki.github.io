@@ -567,28 +567,6 @@
           });
         </script>
       </div>
-      <div class="23 hidden" id="23">
-        <video playsinline>
-          <source src="../assets/part4/the_door/db.mp4" type="video/mp4" />
-        </video>
-        <p style="text-align: center">
-          Microverso 23 - No longer human. (play)
-        </p>
-        <form action="the_door.html" style="text-align: center">
-          <input type="submit" value="Volver" class="w3-button w3-red" />
-        </form>
-        <script>
-          $(document).on("click", ".23:not(.playing)", function () {
-            $(".23").addClass("playing");
-            $("video")[22].play();
-            $("video")[22].volume = 0.1;
-          });
-          $(document).on("click", ".23.playing", function () {
-            $(".23").removeClass("playing");
-            $("video")[22].pause();
-          });
-        </script>
-      </div>
       <div class="24 hidden" id="24">
         <video playsinline>
           <source src="../assets/part4/the_door/emu.mp4" type="video/mp4" />
