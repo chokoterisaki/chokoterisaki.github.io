@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Puerta</title>
+    <link rel="icon" href="../favicons/th075.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body class="part4">
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <style>
+      .espaciodetexto {
+        margin-top: 1cm;
+        border-color: black;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .titulo {
+        text-align: center;
+        color: aquamarine;
+      }
+    </style>
+    <div id="center">
+      <div class="gardenroom" id="gardenroom_hidden">
+        <img
+          alt="normal"
+          class="gardenroom-bg"
+          src="../assets/part4/the_door/the_door.png"
+        />
+        <button id="room"></button>
+        <button id="dazai"></button>
+        <button id="easter"></button>
+        <form action="part4.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+      </div>
+      <div class="0 hidden" id="0">
+        <video playsinline volume="0.01">
+          <source src="../assets/part4/the_door/0.mov" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 0 - ¡Felicidades! (play)</p>
+
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".0:not(.playing)", function () {
+            $(".0").addClass("playing");
+            $("video")[0].play();
+            $("video")[0].volume = 0.01;
+          });
+          $(document).on("click", ".0.playing", function () {
+            $(".0").removeClass("playing");
+            $("video")[0].pause();
+          });
+        </script>
+      </div>
+      <div class="1 hidden" id="1">
+        <video playsinline>
+          <source src="../assets/part4/the_door/2414.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 1 - 1424 (play)</p>
+
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".1:not(.playing)", function () {
+            $(".1").addClass("playing");
+            $("video")[1].play();
+            $("video")[1].volume = 0.01;
+          });
+          $(document).on("click", ".1.playing", function () {
+            $(".1").removeClass("playing");
+            $("video")[1].pause();
+          });
+        </script>
+      </div>
+      <div class="2 hidden" id="2">
+        <img src="../assets/part4/the_door/officev2.png" />
+        <p style="text-align: center">Microverso 2 - Oficina nostálgica</p>
+
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+      </div>
+      <div class="3 hidden" id="3">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/tomfooleryinlsdc.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 3 - Rompámoslo (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".3:not(.playing)", function () {
+            $(".3").addClass("playing");
+            $("video")[2].play();
+            $("video")[2].volume = 0.1;
+          });
+          $(document).on("click", ".3.playing", function () {
+            $(".3").removeClass("playing");
+            $("video")[2].pause();
+          });
+        </script>
+      </div>
+      <div class="4 hidden" id="4">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/trollign (1).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 4 - Mensaje encriptado (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".4:not(.playing)", function () {
+            $(".4").addClass("playing");
+            $("video")[3].play();
+            $("video")[3].volume = 0.1;
+          });
+          $(document).on("click", ".4.playing", function () {
+            $(".4").removeClass("playing");
+            $("video")[3].pause();
+          });
+        </script>
+      </div>
+      <div class="5 hidden" id="5">
+        <video playsinline>
+          <source src="../assets/part4/the_door/tw.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 5 - ilysketchy vs PogEdds (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".5:not(.playing)", function () {
+            $(".5").addClass("playing");
+            $("video")[4].play();
+            $("video")[4].volume = 0.01;
+          });
+          $(document).on("click", ".5.playing", function () {
+            $(".5").removeClass("playing");
+            $("video")[4].pause();
+          });
+        </script>
+      </div>
+      <div class="6 hidden" id="6">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/reimuwood.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 6 - ReimuHood (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".6:not(.playing)", function () {
+            $(".6").addClass("playing");
+            $("video")[5].play();
+            $("video")[5].volume = 0.1;
+          });
+          $(document).on("click", ".6.playing", function () {
+            $(".6").removeClass("playing");
+            $("video")[5].pause();
+          });
+        </script>
+      </div>
+      <div class="7 hidden" id="7">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/esotilin.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 7 - Eso Reimín (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".7:not(.playing)", function () {
+            $(".7").addClass("playing");
+            $("video")[6].play();
+            $("video")[6].volume = 0.1;
+          });
+          $(document).on("click", ".7.playing", function () {
+            $(".7").removeClass("playing");
+            $("video")[6].pause();
+          });
+        </script>
+      </div>
+      <div class="8 hidden" id="8">
+        <video playsinline>
+          <source src="../assets/part4/the_door/INSIDE.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 8 - INFILTRADO (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".8:not(.playing)", function () {
+            $(".8").addClass("playing");
+            $("video")[7].play();
+            $("video")[7].volume = 0.01;
+          });
+          $(document).on("click", ".8.playing", function () {
+            $(".8").removeClass("playing");
+            $("video")[7].pause();
+          });
+        </script>
+      </div>
+      <div class="9 hidden" id="9">
+        <video playsinline>
+          <source src="../assets/part4/the_door/pptx.mkv" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 9 - Admisión. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".9:not(.playing)", function () {
+            $(".9").addClass("playing");
+            $("video")[8].play();
+            $("video")[8].volume = 0.1;
+          });
+          $(document).on("click", ".9.playing", function () {
+            $(".9").removeClass("playing");
+            $("video")[8].pause();
+          });
+        </script>
+      </div>
+      <div class="10 hidden" id="10">
+        <video playsinline>
+          <source src="../assets/part4/the_door/073.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 10 - Agente memético. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".10:not(.playing)", function () {
+            $(".10").addClass("playing");
+            $("video")[9].play();
+            $("video")[9].volume = 0.1;
+          });
+          $(document).on("click", ".10.playing", function () {
+            $(".10").removeClass("playing");
+            $("video")[9].pause();
+          });
+        </script>
+      </div>
+      <div class="11 hidden" id="11">
+        <video width="1024" height="900" playsinline>
+          <source
+            src="../assets/part4/the_door/diplomairl.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 11 - LSDC en Tierra-1218 (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".11:not(.playing)", function () {
+            $(".11").addClass("playing");
+            $("video")[10].play();
+            $("video")[10].volume = 0.1;
+          });
+          $(document).on("click", ".11.playing", function () {
+            $(".11").removeClass("playing");
+            $("video")[10].pause();
+          });
+        </script>
+      </div>
+      <div class="12 hidden" id="12">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/luckystar.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 12 - Cloudcuckoolander (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".12:not(.playing)", function () {
+            $(".12").addClass("playing");
+            $("video")[11].play();
+            $("video")[11].volume = 0.1;
+          });
+          $(document).on("click", ".12.playing", function () {
+            $(".12").removeClass("playing");
+            $("video")[11].pause();
+          });
+        </script>
+      </div>
+      <div class="13 hidden" id="13">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/Nora_sin_grafica_dep.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 13 - Las desgracias nunca vienen solas. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".13:not(.playing)", function () {
+            $(".13").addClass("playing");
+            $("video")[12].play();
+            $("video")[12].volume = 0.1;
+          });
+          $(document).on("click", ".13.playing", function () {
+            $(".13").removeClass("playing");
+            $("video")[12].pause();
+          });
+        </script>
+      </div>
+      <div class="14 hidden" id="14">
+        <video playsinline>
+          <source src="../assets/part4/the_door/putaku.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 14 - Otaku. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".14:not(.playing)", function () {
+            $(".14").addClass("playing");
+            $("video")[13].play();
+            $("video")[13].volume = 0.1;
+          });
+          $(document).on("click", ".14.playing", function () {
+            $(".14").removeClass("playing");
+            $("video")[13].pause();
+          });
+        </script>
+      </div>
+      <div class="15 hidden" id="15">
+        <video poster="../assets/part4/the_door/breachposter.jpg" playsinline>
+          <source src="../assets/part4/the_door/breach.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 15 - Brecha de contención. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".15:not(.playing)", function () {
+            $(".15").addClass("playing");
+            $("video")[14].play();
+            $("video")[14].volume = 0.1;
+          });
+          $(document).on("click", ".15.playing", function () {
+            $(".15").removeClass("playing");
+            $("video")[14].pause();
+          });
+        </script>
+      </div>
+      <div class="16 hidden" id="16">
+        <video playsinline loop>
+          <source
+            src="../assets/part4/the_door/mokofellas.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 16 - Bromomento. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".16:not(.playing)", function () {
+            $(".16").addClass("playing");
+            $("video")[15].play();
+            $("video")[15].volume = 0.1;
+          });
+          $(document).on("click", ".16.playing", function () {
+            $(".16").removeClass("playing");
+            $("video")[15].pause();
+          });
+        </script>
+      </div>
+      <div class="17 hidden" id="17">
+        <video playsinline>
+          <source src="../assets/part4/the_door/S.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 17 - S- (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".17:not(.playing)", function () {
+            $(".17").addClass("playing");
+            $("video")[16].play();
+            $("video")[16].volume = 0.1;
+          });
+          $(document).on("click", ".17.playing", function () {
+            $(".17").removeClass("playing");
+            $("video")[16].pause();
+          });
+        </script>
+      </div>
+      <div class="18 hidden" id="18">
+        <video playsinline>
+          <source src="../assets/part4/the_door/ase.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 18 - Pebble. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".18:not(.playing)", function () {
+            $(".18").addClass("playing");
+            $("video")[17].play();
+            $("video")[17].volume = 0.1;
+          });
+          $(document).on("click", ".18.playing", function () {
+            $(".18").removeClass("playing");
+            $("video")[17].pause();
+          });
+        </script>
+      </div>
+      <div class="19 hidden" id="19">
+        <video playsinline loop>
+          <source src="../assets/part4/the_door/catisco.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 19 - Un gato aerodinámico. ¿Ves? (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".19:not(.playing)", function () {
+            $(".19").addClass("playing");
+            $("video")[18].play();
+            $("video")[18].volume = 0.1;
+          });
+          $(document).on("click", ".19.playing", function () {
+            $(".19").removeClass("playing");
+            $("video")[18].pause();
+          });
+        </script>
+      </div>
+      <div class="20 hidden" id="20">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/Nitori_Money_Game_Part_2_-_Ren.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 20 - DENME UNA CHAMBA POR FAVOR. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".20:not(.playing)", function () {
+            $(".20").addClass("playing");
+            $("video")[19].play();
+            $("video")[19].volume = 0.1;
+          });
+          $(document).on("click", ".20.playing", function () {
+            $(".20").removeClass("playing");
+            $("video")[19].pause();
+          });
+        </script>
+      </div>
+      <div class="21 hidden" id="21">
+        <video playsinline>
+          <source src="../assets/part4/the_door/chicos.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 21 - Chicos... (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".21:not(.playing)", function () {
+            $(".21").addClass("playing");
+            $("video")[20].play();
+            $("video")[20].volume = 0.1;
+          });
+          $(document).on("click", ".21.playing", function () {
+            $(".21").removeClass("playing");
+            $("video")[20].pause();
+          });
+        </script>
+      </div>
+      <div class="22 hidden" id="22">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/Cookjolbin.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">
+          Microverso 22 - Memoria marítima. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".22:not(.playing)", function () {
+            $(".22").addClass("playing");
+            $("video")[21].play();
+            $("video")[21].volume = 0.1;
+          });
+          $(document).on("click", ".22.playing", function () {
+            $(".22").removeClass("playing");
+            $("video")[21].pause();
+          });
+        </script>
+      </div>
+      <div class="23 hidden" id="23">
+        <video playsinline>
+          <source src="../assets/part4/the_door/db.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 23 - No longer human. (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".23:not(.playing)", function () {
+            $(".23").addClass("playing");
+            $("video")[22].play();
+            $("video")[22].volume = 0.1;
+          });
+          $(document).on("click", ".23.playing", function () {
+            $(".23").removeClass("playing");
+            $("video")[22].pause();
+          });
+        </script>
+      </div>
+      <div class="24 hidden" id="24">
+        <video playsinline>
+          <source src="../assets/part4/the_door/emu.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">
+          Microverso 24 - 笑夢 significa ¡sonrisa! (play)
+        </p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".24:not(.playing)", function () {
+            $(".24").addClass("playing");
+            $("video")[23].play();
+            $("video")[23].volume = 0.1;
+          });
+          $(document).on("click", ".24.playing", function () {
+            $(".24").removeClass("playing");
+            $("video")[23].pause();
+          });
+        </script>
+      </div>
+      <div class="25 hidden" id="25">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/Kumbia Kings - Azucar (evangelion) Asuka.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 25 - Asuka. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".25:not(.playing)", function () {
+            $(".25").addClass("playing");
+            $("video")[24].play();
+            $("video")[24].volume = 0.1;
+          });
+          $(document).on("click", ".25.playing", function () {
+            $(".25").removeClass("playing");
+            $("video")[24].pause();
+          });
+        </script>
+      </div>
+      <div class="26 hidden" id="26">
+        <video playsinline>
+          <source src="../assets/part4/the_door/ACEX.mov" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 26 - S E X (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".26:not(.playing)", function () {
+            $(".26").addClass("playing");
+            $("video")[25].play();
+            $("video")[25].volume = 0.1;
+          });
+          $(document).on("click", ".26.playing", function () {
+            $(".26").removeClass("playing");
+            $("video")[25].pause();
+          });
+        </script>
+      </div>
+      <div class="27 hidden" id="27">
+        <video playsinline>
+          <source src="../assets/part4/the_door/gorda.mp4" type="video/mp4" />
+        </video>
+        <p style="text-align: center">Microverso 27 - VRodra. (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".27:not(.playing)", function () {
+            $(".27").addClass("playing");
+            $("video")[26].play();
+            $("video")[26].volume = 0.1;
+          });
+          $(document).on("click", ".27.playing", function () {
+            $(".27").removeClass("playing");
+            $("video")[26].pause();
+          });
+        </script>
+      </div>
+      <div class="28 hidden" id="28">
+        <video playsinline>
+          <source
+            src="../assets/part4/the_door/Perrito_diciendo_Bom_Dia_con_cancion_nipona360P_1 (1).mp4"
+            type="video/mp4"
+          />
+        </video>
+        <p style="text-align: center">Microverso 28 - gm (play)</p>
+        <form action="the_door.html" style="text-align: center">
+          <input type="submit" value="Volver" class="w3-button w3-red" />
+        </form>
+        <script>
+          $(document).on("click", ".28:not(.playing)", function () {
+            $(".28").addClass("playing");
+            $("video")[27].play();
+            $("video")[27].volume = 0.1;
+          });
+          $(document).on("click", ".28.playing", function () {
+            $(".28").removeClass("playing");
+            $("video")[27].pause();
+          });
+        </script>
+      </div>
+      <style>
+        #room {
+          position: absolute;
+          left: 41%;
+          top: 40%;
+          width: 11%;
+          height: 22%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #dazai {
+          position: absolute;
+          left: 20%;
+          top: 37%;
+          width: 6%;
+          height: 22%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #easter {
+          position: absolute;
+          left: 92%;
+          top: 30%;
+          width: 7%;
+          height: 27%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+      </style>
+      <style>
+        .part4 {
+          padding: 0;
+          margin: 0;
+        }
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        html {
+          position: relative;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        body {
+          background-color: black;
+          color: #ffffff;
+          font-family: "8bitOperatorPlus-Bold", monospace;
+          padding: 0;
+          margin: 0;
+        }
+
+        .hidden {
+          display: none !important;
+        }
+
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        #ytand {
+          position: relative;
+          display: grid;
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+          color: #353535;
+          place-items: center center;
+        }
+
+        #ytand #image {
+          width: 100vw;
+          height: 100vh;
+          background-repeat: repeat;
+        }
+
+        #ytand #text {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 810px;
+          z-index: 10;
+          text-align: center;
+          font-family: Tahoma, sans-serif;
+        }
+
+        #ytand #text div {
+          position: absolute;
+          width: 810px;
+        }
+        .gardenroom {
+          position: relative;
+        }
+
+        .gardenroom-bg {
+          width: 100%;
+          image-rendering: pixelated;
+          pointer-events: none;
+        }
+      </style>
+
+      <script>
+        var RNG = Math.floor(Math.random() * 29);
+        console.log(RNG);
+        var gardenroom = new Howl({
+          src: ["../assets/part4/the_door/memory.ogg"],
+          volume: 0.03,
+          loop: false,
+        });
+        $(document).on("click", "#easter", function () {
+          gardenroom.play();
+        });
+        $(document).on("click", "#dazai", function () {
+          alert(
+            "Esta es la Puerta de Eddschrödinger. Al entrar, tenéis una probabilidad de ir a una de las 30 posibles habitaciones. ¿Lo queréis probar?"
+          );
+        });
+        $(document).on("click", "#room", function () {
+          /*if (RNG == 0) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#0").removeClass("hidden");
+            document.title = "Kanadeuwu";
+          } else if (RNG == 1) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#1").removeClass("hidden");
+          } else if (RNG == 2) {
+            $("#gardenroom_hidden").addClass("hidden");
+            $("#2").removeClass("hidden");
+          }*/
+          for (i = 0; i < 29; i++) {
+            if (i == RNG) {
+              $("#gardenroom_hidden").addClass("hidden");
+              $("#" + i).removeClass("hidden");
+            }
+          }
+        });
+        if (RNG == 29) {
+          $(document).on("click", ".#room", function () {
+            $(".29").addClass("playing");
+            $("video")[28].play();
+            $("video")[28].volume = 0.1;
+          });
+        }
+      </script>
+    </div>
+  </body>
+</html>
