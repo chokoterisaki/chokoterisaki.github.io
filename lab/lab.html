@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio</title>
+    <link rel="icon" href="../favicons/th09.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="center">
+      <div class="espaciodetexto">
+        <div class="gardenroom" id="gardenroom_hidden">
+          <style>
+            img {
+              width: 1000x;
+              height: 1000px;
+            }
+          </style>
+          <img
+            alt="Laboratorio"
+            class="gardenroom-bg"
+            src="../assets/lab/Lab_map.png"
+          />
+          <button id="panfleto"></button>
+          <button id="poster"></button>
+          <button id="creatura"></button>
+          <button id="tocador"></button>
+          <button id="armario"></button>
+          <button id="mesa"></button>
+          <button id="plano"></button>
+          <button id="papilla"></button>
+          <button id="libreria1"></button>
+          <button id="libreria2"></button>
+          <button id="libreria3"></button>
+          <button id="libreria4"></button>
+          <button id="libreria5"></button>
+          <button id="monitor"></button>
+          <button id="tacho"></button>
+          <button id="papel1"></button>
+          <button id="papel2"></button>
+          <button id="papel3"></button>
+          <button id="papel4"></button>
+          <button id="papel5"></button>
+          <button id="papel6"></button>
+          <button id="computadora"></button>
+          <button id="heladera"></button>
+          <button id="fumo"></button>
+          <button id="comida"></button>
+          <button id="checkpoint"></button>
+          <button id="baño"></button>
+          <button id="nora"></button>
+          <form action="part4.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
+        </div>
+
+        <div class="right hidden" id="right">
+          <img
+            alt="right"
+            class="gardenroom-bg"
+            src="../assets/part4/upper_floor/FECHA_DE_ESTRENO_LSDC-MEMORY.png"
+          />
+          <br />
+          <br />
+          <form action="upper_floor.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
+        </div>
+        <div class="left hidden" id="left" style="margin-top: 50%">
+          <a
+            style="text-align: center; text-decoration: underline"
+            href="https://drive.google.com/file/d/1ENbQRGC-nuf6vT6UWQm6rGDFl71zANTV/view"
+            >LINEA DE TIEMPO I.A 1-A</a
+          ><br /><br />
+          <br />
+          <form action="upper_floor.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <style>
+      #panfleto {
+        position: absolute;
+        left: 6%;
+        top: 10%;
+        width: 5%;
+        height: 11%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #poster {
+        position: absolute;
+        left: 16%;
+        top: 4%;
+        width: 10%;
+        height: 9%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #creatura {
+        position: absolute;
+        left: 18%;
+        top: 15%;
+        width: 6%;
+        height: 11%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #tocador {
+        position: absolute;
+        left: 28%;
+        top: 13%;
+        width: 6%;
+        height: 10%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #armario {
+        position: absolute;
+        left: 36%;
+        top: 11%;
+        width: 4%;
+        height: 12%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #mesa {
+        position: absolute;
+        left: 44%;
+        top: 16%;
+        width: 8%;
+        height: 6%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #plano {
+        position: absolute;
+        left: 40%;
+        top: 3%;
+        width: 18%;
+        height: 11%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papilla {
+        position: absolute;
+        left: 57%;
+        top: 16%;
+        width: 9%;
+        height: 9%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #libreria1 {
+        position: absolute;
+        left: 67%;
+        top: 11%;
+        width: 5%;
+        height: 14%;
+        cursor:crosshair;
+        background: none;
+        border: none;
+      }
+      #libreria2 {
+        position: absolute;
+        left: 72%;
+        top: 11%;
+        width: 4%;
+        height: 14%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #libreria3 {
+        position: absolute;
+        left: 77%;
+        top: 11%;
+        width: 4%;
+        height: 14%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #libreria4 {
+        position: absolute;
+        left: 82%;
+        top: 11%;
+        width: 4%;
+        height: 14%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #libreria5 {
+        position: absolute;
+        left: 86%;
+        top: 11%;
+        width: 5%;
+        height: 14%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #monitor {
+        position: absolute;
+        left: 14%;
+        top: 59%;
+        width: 7%;
+        height: 15%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #tacho {
+        position: absolute;
+        left: 25%;
+        top: 75%;
+        width: 2%;
+        height: 5%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel1 {
+        position: absolute;
+        left: 27%;
+        top: 83%;
+        width: 1%;
+        height: 3%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel2 {
+        position: absolute;
+        left: 28%;
+        top: 78%;
+        width: 2%;
+        height: 5%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel3 {
+        position: absolute;
+        left: 30.5%;
+        top: 80%;
+        width: 1.5%;
+        height: 4%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel4 {
+        position: absolute;
+        left: 33.5%;
+        top: 79%;
+        width: 1%;
+        height: 3%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel5 {
+        position: absolute;
+        left: 35.5%;
+        top: 81%;
+        width: 1.5%;
+        height: 2%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #papel6 {
+        position: absolute;
+        left: 30%;
+        top: 68%;
+        width: 1.5%;
+        height: 2%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #computadora {
+        position: absolute;
+        left: 32%;
+        top: 69%;
+        width: 3.5%;
+        height: 9%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #heladera {
+        position: absolute;
+        left: 40%;
+        top: 67%;
+        width: 4%;
+        height: 13%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #fumo {
+        position: absolute;
+        left: 37.5%;
+        top: 78%;
+        width: 2%;
+        height: 4%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #comida {
+        position: absolute;
+        left: 45%;
+        top: 70%;
+        width: 3.5%;
+        height: 7%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #checkpoint {
+        position: absolute;
+        left: 60%;
+        top: 62%;
+        width: 5.5%;
+        height: 15%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #baño {
+        position: absolute;
+        left: 74%;
+        top: 60%;
+        width: 5.5%;
+        height: 16%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+      #nora {
+        position: absolute;
+        left: 89%;
+        top: 79%;
+        width: 10.5%;
+        height: 11%;
+        cursor: crosshair;
+        background: none;
+        border: none;
+      }
+    </style>
+    <style>
+      .part4 {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+      }
+      #center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      html {
+        position: relative;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: black;
+        color: #ffffff;
+        font-family: "8bitOperatorPlus-Bold", monospace;
+        padding: 0;
+        margin: 0;
+      }
+
+      .hidden {
+        display: none !important;
+      }
+
+      #center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #ytand {
+        position: relative;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        color: #353535;
+        place-items: center center;
+      }
+
+      #ytand #image {
+        width: 100vw;
+        height: 100vh;
+        background-repeat: repeat;
+      }
+
+      #ytand #text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 810px;
+        z-index: 10;
+        text-align: center;
+        font-family: Tahoma, sans-serif;
+      }
+
+      #ytand #text div {
+        position: absolute;
+        width: 810px;
+      }
+      .gardenroom {
+        position: relative;
+      }
+
+      .gardenroom-bg {
+        width: 100%;
+        image-rendering: pixelated;
+        pointer-events: none;
+      }
+    </style>
+    <script>
+      $(document).on("click", "#panfleto", function () {
+        $("#panfleto").removeClass("hidden");
+        $("#gardenroom_hidden").addClass("hidden");
+      });
+      $(document).on("click", "#leftD", function () {
+        $("#left").removeClass("hidden");
+        $("#gardenroom_hidden").addClass("hidden");
+      });
+      $(document).on("click", "#elevatorPH", function () {
+        alert("to be continued... lol");
+      });
+    </script>
+  </body>
+</html>
