@@ -329,7 +329,7 @@
           <img
             alt="tocador"
             class="gardenroom-bg"
-            src="../assets/lab/boxes/lib2.png"
+            src="../assets/lab/boxes/libreria2.png"
           />
         </div>
         <div class="libreria3 hidden" id="lib3">
@@ -416,18 +416,49 @@
             src="../assets/lab/boxes/computadora.png"
           />
         </div>
-        <div class="armario hidden" id="armar">
+        <div class="heladera hidden" id="hela">
           <img
             alt="armario"
             class="gardenroom-bg"
-            src="../assets/lab/boxes/armario.png"
+            src="../assets/lab/boxes/heladera.png"
           />
         </div>
-        <div class="mesa hidden" id="mes">
+        <div class="fumo hidden" id="fum">
           <img
             alt="mesa"
             class="gardenroom-bg"
-            src="../assets/lab/boxes/mesa.png"
+            src="../assets/lab/boxes/fumo.png"
+          />
+        </div>
+        <div class="comida hidden" id="comi">
+          <img
+            alt="panfleto"
+            class="gardenroom-bg"
+            src="../assets/lab/boxes/comida.png"
+          />
+        </div>
+        <div class="checkpoint hidden" id="check">
+          <img
+            alt="poster"
+            class="gardenroom-bg"
+            src="../assets/lab/boxes/checkpoint.png"
+          />
+          <form action="place.html">
+            <input type="submit" value="Proceder" class="w3-button w3-blue w3-display-bottommiddle">
+        </form>
+        </div>
+        <div class="baño hidden" id="bañ">
+          <img
+            alt="creatura"
+            class="gardenroom-bg"
+            src="../assets/lab/boxes/baño.png"
+          />
+        </div>
+        <div class="nora hidden" id="nor">
+          <img
+            alt="tocador"
+            class="gardenroom-bg"
+            src="../assets/lab/boxes/nora.png"
           />
         </div>
       </div>
@@ -586,7 +617,7 @@
       #papel1 {
         position: absolute;
         left: 27%;
-        top: 83%;
+        top: 86%;
         width: 1%;
         height: 3%;
         cursor: crosshair;
@@ -595,8 +626,8 @@
       }
       #papel2 {
         position: absolute;
-        left: 28%;
-        top: 78%;
+        left: 28.3%;
+        top: 81%;
         width: 2%;
         height: 5%;
         cursor: crosshair;
@@ -606,7 +637,7 @@
       #papel3 {
         position: absolute;
         left: 30.5%;
-        top: 80%;
+        top: 85%;
         width: 1.5%;
         height: 4%;
         cursor: crosshair;
@@ -616,7 +647,7 @@
       #papel4 {
         position: absolute;
         left: 33.5%;
-        top: 79%;
+        top: 84%;
         width: 1%;
         height: 3%;
         cursor: crosshair;
@@ -626,7 +657,7 @@
       #papel5 {
         position: absolute;
         left: 35.5%;
-        top: 81%;
+        top: 86%;
         width: 1.5%;
         height: 2%;
         cursor: crosshair;
@@ -636,7 +667,7 @@
       #papel6 {
         position: absolute;
         left: 30%;
-        top: 68%;
+        top: 72%;
         width: 1.5%;
         height: 2%;
         cursor: crosshair;
@@ -656,7 +687,7 @@
       #heladera {
         position: absolute;
         left: 40%;
-        top: 67%;
+        top: 72%;
         width: 4%;
         height: 13%;
         cursor: crosshair;
@@ -666,7 +697,7 @@
       #fumo {
         position: absolute;
         left: 37.5%;
-        top: 78%;
+        top: 81%;
         width: 2%;
         height: 4%;
         cursor: crosshair;
@@ -676,7 +707,7 @@
       #comida {
         position: absolute;
         left: 45%;
-        top: 70%;
+        top: 73%;
         width: 3.5%;
         height: 7%;
         cursor: crosshair;
@@ -686,7 +717,7 @@
       #checkpoint {
         position: absolute;
         left: 60%;
-        top: 62%;
+        top: 65%;
         width: 5.5%;
         height: 15%;
         cursor: crosshair;
@@ -706,7 +737,7 @@
       #nora {
         position: absolute;
         left: 89%;
-        top: 79%;
+        top: 81%;
         width: 10.5%;
         height: 11%;
         cursor: crosshair;
@@ -818,8 +849,187 @@
         $("#post").addClass("last");
         interact.play();
       });
-      $(document).on("click", "#elevatorPH", function () {
-        alert("to be continued... lol");
+      $(document).on("click", "#creatura", function () {
+        $("#creat").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#creat").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#tocador", function () {
+        $("#toca").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#toca").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#armario", function () {
+        $("#armar").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#armar").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#mesa", function () {
+        $("#mes").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#mes").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#plano", function () {
+        $("#plan").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#plan").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papilla", function () {
+        $("#papi").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#papi").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#libreria1", function () {
+        $("#lib1").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#lib1").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#libreria2", function () {
+        $("#lib2").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#lib2").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#libreria3", function () {
+        $("#lib3").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#lib3").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#libreria4", function () {
+        $("#lib4").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#lib4").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#libreria5", function () {
+        $("#lib5").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#lib5").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#monitor", function () {
+        $("#moni").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#moni").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#tacho", function () {
+        $("#tach").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#tach").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel1", function () {
+        $("#pap1").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap1").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel2", function () {
+        $("#pap2").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap2").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel3", function () {
+        $("#pap3").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap3").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel4", function () {
+        $("#pap4").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap4").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel5", function () {
+        $("#pap5").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap5").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#papel6", function () {
+        $("#pap6").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#pap6").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#computadora", function () {
+        $("#compu").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#compu").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#heladera", function () {
+        $("#hela").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#hela").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#fumo", function () {
+        $("#fum").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#fum").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#comida", function () {
+        $("#comi").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#comi").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#baño", function () {
+        $("#bañ").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#bañ").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#checkpoint", function () {
+        $("#check").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#check").addClass("last");
+        interact.play();
+      });
+      $(document).on("click", "#nora", function () {
+        $("#nor").removeClass("hidden");
+        $(".last").addClass("hidden");
+        $(".last").removeClass("last");
+        $("#nor").addClass("last");
+        interact.play();
       });
     </script>
   </body>

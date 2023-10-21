@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>La Puerta</title>
+    <title>elevador</title>
     <link rel="icon" href="../favicons/th08.png" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
   </head>
@@ -35,204 +35,73 @@
     </style>
     <div id="center">
       <div class="espaciodetexto">
-        <h1 class="titulo">Epicentro</h1>
         <div class="gardenroom" id="gardenroom_hidden">
           <img
             alt="Langley"
             class="gardenroom-bg"
-            src="../assets/part4/the_door/the_door.png"
+            src="../assets/part4/upper_floor/CORE_location_lobby.webp"
           />
-          <a alt="further" href="the_door.html" id="further"></a>
-          <a alt="ahead" href="upper_floor.html" id="ahead"></a>
-          <button id="nene"></button>
-          <button id="maris"></button>
-          <button id="inv-tea"></button>
-          <button id="inv-palove"></button>
-          <button id="inv-palog"></button>
-          <button id="inv-iphone"></button>
-          <button id="inv-paloppy"></button>
-          <button id="inv-onesie"></button>
-          <button id="inv-saiki"></button>
-          <button id="inv-cat"></button>
+          <!--<a alt="elevatorPH" href="../lab" id="elevatorPH"></a>-->
+          <button id="leftD"></button>
+          <button id="rightD"></button>
+          <button id="elevatorPH"></button>
+          <form action="part4.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
         </div>
-        <div class="tea hidden" id="tea">
+
+        <div class="right hidden" id="right">
           <img
-            alt="tea"
+            alt="right"
             class="gardenroom-bg"
-            src="../assets/part4/teabox.png"
+            src="../assets/part4/upper_floor/FECHA_DE_ESTRENO_LSDC-MEMORY.png"
           />
+          <br />
+          <br />
+          <form action="upper_floor.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
         </div>
-        <div class="palove hidden" id="palove">
-          <img
-            alt="palove"
-            class="gardenroom-bg"
-            src="../assets/part4/CPaloBox.png"
-          />
-        </div>
-        <div class="palog hidden" id="palog">
-          <img
-            alt="palog"
-            class="gardenroom-bg"
-            src="../assets/part4/TPaloBox.png"
-          />
-        </div>
-        <div class="iphone hidden" id="iphone">
-          <img
-            alt="iphone"
-            class="gardenroom-bg"
-            src="../assets/part4/iphonebox.png"
-          />
-        </div>
-        <div class="paloppy hidden" id="paloppy">
-          <img
-            alt="paloppy"
-            class="gardenroom-bg"
-            src="../assets/part4/GPaloBox.png"
-          />
-        </div>
-        <div class="onesie hidden" id="onesie">
-          <img
-            alt="onesie"
-            class="gardenroom-bg"
-            src="../assets/part4/onesiebox.png"
-          />
-        </div>
-        <div class="saiki hidden" id="saiki">
-          <img
-            alt="saiki"
-            class="gardenroom-bg"
-            src="../assets/part4/saikibox.png"
-          />
-        </div>
-        <div class="gato hidden" id="gato">
-          <img
-            alt="gato"
-            class="gardenroom-bg"
-            src="../assets/part4/catbox.png"
-          />
+        <div class="left hidden" id="left" style="margin-top: 50%">
+          <a
+            style="text-align: center; text-decoration: underline"
+            href="https://drive.google.com/file/d/1ENbQRGC-nuf6vT6UWQm6rGDFl71zANTV/view"
+            >LINEA DE TIEMPO I.A 1-A</a
+          ><br /><br />
+          <br />
+          <form action="upper_floor.html" style="text-align: center">
+            <input type="submit" value="Volver" class="w3-button w3-red" />
+          </form>
         </div>
       </div>
     </div>
     <style>
-      #further {
+      #leftD {
         position: absolute;
-        left: 38%;
-        top: 56%;
-        width: 6%;
-        height: 12%;
+        left: 6%;
+        top: 10%;
+        width: 14%;
+        height: 17%;
         cursor: pointer;
         background: none;
         border: none;
       }
-      #ahead {
+      #rightD {
         position: absolute;
-        left: 76%;
-        top: 66%;
-        width: 8%;
-        height: 16%;
+        left: 81%;
+        top: 10%;
+        width: 14%;
+        height: 17%;
         cursor: pointer;
         background: none;
         border: none;
       }
-      #nene {
+      #elevatorPH {
         position: absolute;
-        left: 24%;
-        top: 75%;
-        width: 10%;
-        height: 25%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #maris {
-        position: absolute;
-        left: 14%;
-        top: 75%;
-        width: 10%;
-        height: 25%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #inv-tea {
-        position: absolute;
-        left: 87%;
-        top: 27%;
-        width: 5%;
-        height: 10%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #inv-palove {
-        position: absolute;
-        left: 92%;
-        top: 27%;
-        width: 5%;
-        height: 9%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #inv-palog {
-        position: absolute;
-        left: 87%;
-        top: 37%;
-        width: 5%;
-        height: 9%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-
-      #inv-iphone {
-        position: absolute;
-        left: 92%;
-        top: 37%;
-        width: 6%;
-        height: 9%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-
-      #inv-paloppy {
-        position: absolute;
-        left: 87%;
-        top: 78%;
-        width: 5%;
-        height: 9%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-
-      #inv-onesie {
-        position: absolute;
-        left: 93%;
-        top: 77%;
-        width: 5%;
-        height: 10%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #inv-saiki {
-        position: absolute;
-        left: 87%;
-        top: 87%;
-        width: 5%;
-        height: 10%;
-        cursor: pointer;
-        background: none;
-        border: none;
-      }
-      #inv-cat {
-        position: absolute;
-        left: 93%;
-        top: 88%;
-        width: 5%;
-        height: 9%;
+        left: 43%;
+        top: 29%;
+        width: 14%;
+        height: 21%;
         cursor: pointer;
         background: none;
         border: none;
@@ -240,7 +109,6 @@
     </style>
     <style>
       .part4 {
-        background-image: url(../assets/part4/houraibito.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0;
@@ -324,98 +192,17 @@
       }
     </style>
     <script>
-      $(document).on("click", "#inv-tea", function () {
-        $("#tea").removeClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
+      $(document).on("click", "#rightD", function () {
+        $("#right").removeClass("hidden");
+        $("#gardenroom_hidden").addClass("hidden");
       });
-      $(document).on("click", "#inv-palove", function () {
-        $("#palove").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
+      $(document).on("click", "#leftD", function () {
+        $("#left").removeClass("hidden");
+        $("#gardenroom_hidden").addClass("hidden");
       });
-<<<<<<< Updated upstream
-      $(document).on("click", "#inv-palog", function () {
-        $("#palog").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
-=======
       $(document).on("click", "#elevatorPH", function () {
         window.location.href = "../lab/lab.html";
->>>>>>> Stashed changes
       });
-      $(document).on("click", "#inv-iphone", function () {
-        $("#iphone").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
-      });
-      $(document).on("click", "#inv-paloppy", function () {
-        $("#paloppy").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
-      });
-      $(document).on("click", "#inv-onesie", function () {
-        $("#onesie").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#gato").addClass("hidden");
-      });
-      $(document).on("click", "#inv-saiki", function () {
-        $("#saiki").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#onesie").addClass("hidden");
-        $("#gato").addClass("hidden");
-      });
-      $(document).on("click", "#inv-cat", function () {
-        $("#gato").removeClass("hidden");
-        $("#tea").addClass("hidden");
-        $("#palove").addClass("hidden");
-        $("#palog").addClass("hidden");
-        $("#iphone").addClass("hidden");
-        $("#paloppy").addClass("hidden");
-        $("#saiki").addClass("hidden");
-        $("#onesie").addClass("hidden");
-      });
-      $(document).on("click", "#nene", function () {
-      alert("ATENCION: ROBO-NENE SE APAGARÁ EN 10 MINUTOS DE NO SER REEMPLAZADA EL DISPOTIVO DE ALIMENTACIÓN 'Batería Original Nintendo Switch 4310mAh'")
-      })
-      
-      $(document).on("click", "#maris", function () {
-      alert("Ok, podemos ir directamente arriba o... ver esa extraña puerta en la pared.")
-      })
     </script>
   </body>
 </html>
