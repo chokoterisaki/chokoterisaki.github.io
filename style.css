@@ -8,6 +8,11 @@
     background-repeat: no-repeat;
     background-size:cover;
 }
+.part6{
+  background-image:url(assets/part6/hokma.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 
 .espaciodetexto{
     margin-top: 1cm;
@@ -45,8 +50,8 @@
     color:rgb(255, 0, 255);
   }
   .nt{
-    font-size:large;
+    font-size:xx-large;
     color:white;
-    font-family: fantasy;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
