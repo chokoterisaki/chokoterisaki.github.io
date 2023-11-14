@@ -1,21 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORE</title>
-    <link rel="icon" href="../favicons/th11.png">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="game-container">
-        <canvas class="game-canvas" width="256" height="256"></canvas>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Núcleo</title>
+    <link rel="icon" href="../favicons/th12.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body style="background: rgba(0, 0, 0, 1)">
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <p class="choko">
+      —Gracias a nuestra alta tecnología anti-rupturas del espaciotiempo, ahora
+      mismo tenéis dos opciones.
+    </p>
+    <p class="choko">
+      —La primera, es deshacernos de la singularidad, terminando el incidente
+      brusca pero rápidamente.
+    </p>
+    <p class="choko">
+      —La segunda, es alimentar la energía de la singularidad para dejar que
+      crezca y cumpla su propósito.
+    </p>
+    <p class="choko">
+      —No sabemos cuál es la mejor opción. Aprovechando que es vuestro primer
+      día y que estáis en el epicentro del incidente, los pilares dejaron la
+      decisión en sus manos.
+    </p>
+    <div
+      style="margin: auto; width: 50%; border: 3px solid green; padding: 10px; text-align:center;"
+    >
+      <button class="w3-button w3-red w3-margin" id="boton" onclick="cukenio()">
+        Destruir la singularidad
+      </button>
+      <button class="w3-button w3-blue w3-margin" id="boton" onclick="cukenio()">
+        Completar la singularidad
+      </button>
     </div>
-    <script src="core.js"></script>
-    <script src="GameObject.js"></script>
-    <script src="Sprite.js"></script>
-    <script src="init.js"></script>
-    
-</body>
+  </body>
 </html>
