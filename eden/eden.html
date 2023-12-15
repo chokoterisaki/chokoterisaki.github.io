@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E D E N</title>
+    <link rel="icon" href="../favicons/th12.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="eden.css" />
+  </head>
+  <body
+    style="
+      background-image: url(../assets/eden/milk.jpeg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      image-rendering: pixelated;
+    "
+  >
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <button id="D" onclick="DETZIP('D')"></button>
+    <button id="E1" onclick="DETZIP('E1')"></button>
+    <button id="T1" onclick="DETZIP('T1')"></button>
+    <button id="E2" onclick="DETZIP('E2')"></button>
+    <button id="R" onclick="DETZIP('R')"></button>
+    <button id="M" onclick="DETZIP('M')"></button>
+    <button id="I1" onclick="DETZIP('I1')"></button>
+    <button id="N1" onclick="DETZIP('N1')"></button>
+    <button id="A" onclick="DETZIP('A')"></button>
+    <button id="T2" onclick="DETZIP('T2')"></button>
+    <button id="I2" onclick="DETZIP('I2')"></button>
+    <button id="O" onclick="DETZIP('O')"></button>
+    <button id="N2" onclick="DETZIP('N2')"></button>
+    <button id="DET" onclick="DETZIP('DET')"></button>
+
+    <script>
+      function DETZIP(det) {
+        if( det == "D"){
+          alert("1: D")
+        }
+        else if(det == "E1"){
+          alert("2: E")
+        }
+        else if(det == "T1"){
+          alert("3: T")
+        }
+        else if(det == "E2"){
+          alert("4: E")
+        }
+        else if(det == "R"){
+          alert("5: R")
+        }
+        else if(det == "M"){
+          alert("6: M")
+        }
+        else if(det == "I1"){
+          alert("7: I")
+        }
+        else if(det == "N1"){
+          alert("8: N")
+        }
+        else if(det == "A"){
+          alert("9: A")
+        }
+        else if(det == "T2"){
+          alert("10: T")
+        }
+        else if(det == "I2"){
+          alert("11: I")
+        }
+        else if(det == "O"){
+          alert("12: O")
+        }
+        else if(det == "N2"){
+          alert("13: N")
+        }
+        else if(det == 'DET'){
+          eden = prompt("you are filled with");
+          if (eden == 'determination' || eden == 'DETERMINATION'){
+            window.location.href = "actor.html";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

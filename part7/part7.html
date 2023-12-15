@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parte 7</title>
+    <link rel="icon" id="favicon" href="../favicons/th125.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <script src="https://renjs.net/downloads/releases/renjs.js"></script>
+  </head>
+  <body style="background-color: black" onload="init()">
+    <style>
+      #space_hidden {
+        position: relative;
+      }
+      .hidden {
+        display: none !important;
+      }
+    </style>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <style>
+      .espacio {
+        width: 1280px;
+        height: 720px;
+        margin: auto;
+        position: relative;
+      }
+      .fondo {
+        position: absolute;
+      }
+      .reina {
+        position: absolute;
+        width: 50%;
+        height: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 0;
+        right: 0;
+      }
+      .botones {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        top: 100%;
+      }
+    </style>
+    <div class="space w3-center" id="space_hidden">
+      <button class="w3-button w3-black" id="boton" onclick="cukenio()">
+        Despierta
+      </button>
+    </div>
+    <div class="space hidden" id="space">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+        <button class="botones" id="boton2" onclick="cukenio2()">
+          <img src="../assets/part7/1.png" />
+        </button>
+      </div>
+    </div>
+    <div class="space hidden" id="space2">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton3" onclick="cukenio3()">
+        <img src="../assets/part7/2.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space3">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton4" onclick="cukenio4()">
+        <img src="../assets/part7/3.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space4">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/intaBE.jpg"
+        />
+        <img class="reina" src="../assets/part7/queenBE.png" />
+      </div>
+      <button class="botones" id="boton5" onclick="cukenio5()">
+        <img src="../assets/part7/4.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space5">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton6" onclick="cukenio6()">
+        <img src="../assets/part7/5.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space6">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton7" onclick="cukenio7()">
+        <img src="../assets/part7/6.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space7">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton8" onclick="cukenio8()">
+        <img src="../assets/part7/7.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space8">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton9" onclick="cukenio9()">
+        <img src="../assets/part7/8.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space9">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/inta.jpg"
+        />
+        <img class="reina" src="../assets/part7/queen.png" />
+      </div>
+      <button class="botones" id="boton10">
+        <img src="../assets/part7/9.png" />
+      </button>
+      <button class="botones w3-button w3-green" onclick="cukenio10()">
+        chi
+      </button>
+      <button
+        class="botones w3-button w3-red"
+        onclick="window.location.href='umm.html'"
+      >
+        ño
+      </button>
+    </div>
+    <div class="space hidden" id="space10">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/LSDCREUNITED.jpg"
+        />
+      </div>
+      <button class="botones" id="boton11" onclick="cukenio11()">
+        <img src="../assets/part7/11.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space11">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/RM.png"
+        />
+      </div>
+      <button class="botones" id="boton12" onclick="cukenio12()">
+        <img src="../assets/part7/12.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space12">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/RM.png"
+        />
+      </div>
+      <button class="botones" id="boton13" onclick="cukenio13()">
+        <img src="../assets/part7/13.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space13">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/RM.png"
+        />
+      </div>
+      <button class="botones" id="boton14" onclick="cukenio14()">
+        <img src="../assets/part7/14.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space14">
+      <div class="espacio">
+        <img
+          class="fondo"
+          width="1280"
+          height="720"
+          src="../assets/part7/RM.png"
+        />
+      </div>
+      <button class="botones" id="boton15" onclick="cukenio15()">
+        <img src="../assets/part7/15.png" />
+      </button>
+    </div>
+    <div class="space hidden" id="space15">
+      <div class="espacio">
+        <p style="color: white">
+          LSDC:DC INTERMISSION <br />
+          En los próximos dias, tras tiempo suficiente como para que todos hayan
+          terminado de ver la página, <br />
+          La bio se actualizará con la nueva, remodelada versión de la página
+          donde encontraran toda la información acerca de <br />
+          información sobre aze y sus proyectos, tanto terminados como en proceso, tanto generales como del universo
+          cinematográfico, entre otras cosas lol. <br />
+          Gracias a LSDC, la familia, y Radio Paris por apoyar el proyecto.
+        </p>
+      </div>
+    </div>
+    <script>
+      var core = new Howl({
+        src: ["../assets/part7/BTW.ogg", "../assets/part7/BTW.mp3"],
+        volume: 0.03,
+        loop: true,
+      });
+      var boton = document.getElementById(boton);
+      var boton2 = document.getElementById(boton2);
+      function init() {
+        core.play();
+      }
+      function cukenio() {
+        $("#space_hidden").addClass("hidden");
+        $("#space").removeClass("hidden");
+        core.play();
+      }
+      function cukenio2() {
+        $("#space").addClass("hidden");
+        $("#space2").removeClass("hidden");
+      }
+      function cukenio3() {
+        $("#space2").addClass("hidden");
+        $("#space3").removeClass("hidden");
+      }
+      function cukenio4() {
+        $("#space3").addClass("hidden");
+        $("#space4").removeClass("hidden");
+        core.pause();
+      }
+      function cukenio5() {
+        $("#space4").addClass("hidden");
+        $("#space5").removeClass("hidden");
+        core.play();
+      }
+      function cukenio6() {
+        $("#space5").addClass("hidden");
+        $("#space6").removeClass("hidden");
+      }
+      function cukenio7() {
+        $("#space6").addClass("hidden");
+        $("#space7").removeClass("hidden");
+      }
+      function cukenio8() {
+        $("#space7").addClass("hidden");
+        $("#space8").removeClass("hidden");
+      }
+      function cukenio9() {
+        $("#space8").addClass("hidden");
+        $("#space9").removeClass("hidden");
+      }
+      function cukenio10() {
+        $("#space9").addClass("hidden");
+        $("#space10").removeClass("hidden");
+      }
+      function cukenio11() {
+        $("#space10").addClass("hidden");
+        $("#space11").removeClass("hidden");
+      }
+      function cukenio12() {
+        $("#space11").addClass("hidden");
+        $("#space12").removeClass("hidden");
+      }
+      function cukenio13() {
+        $("#space12").addClass("hidden");
+        $("#space13").removeClass("hidden");
+      }
+      function cukenio14() {
+        $("#space13").addClass("hidden");
+        $("#space14").removeClass("hidden");
+      }
+      function cukenio15() {
+        $("#space14").addClass("hidden");
+        $("#space15").removeClass("hidden");
+      }
+      function cukenio16() {
+        $("#space15").addClass("hidden");
+        $("#space16").removeClass("hidden");
+      }
+    </script>
+  </body>
+</html>

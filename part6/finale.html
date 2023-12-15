@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instalación O-5681</title>
+    <link rel="icon" id="favicon" href="../favicons/th11.png" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+      }
+      #lol_hidden {
+        position: relative;
+      }
+      .hidden {
+        display: none !important;
+      }
+    </style>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <div class="lol" id="lol_hidden">
+      <div class="espaciodetexto">
+        <p class="choko">
+          —Gracias a nuestra alta tecnología anti-rupturas del espaciotiempo,
+          ahora mismo tenéis dos opciones.
+        </p>
+        <p class="choko">
+          —La primera, es deshacernos de la singularidad, terminando el
+          incidente rápidamente.
+        </p>
+        <p class="choko">
+          —La segunda, es alimentar la energía de la singularidad para dejar que
+          crezca y cumpla su propósito.
+        </p>
+        <p class="choko">
+          —No sabemos cuál es la mejor opción. Aprovechando que es vuestro
+          primer día y que estáis en el epicentro del incidente, los pilares
+          dejaron la decisión en sus manos.
+        </p>
+        <p class="choko">
+          —Lo único que me queda decir, es que elijan lo que elijan, habrá una
+          consecuencia.
+        </p>
+        <div
+          style="
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+            text-align: center;
+          "
+        >
+          <button class="w3-button w3-red w3-margin" id="eden" onclick="eden()">
+            Destruir la singularidad
+          </button>
+          <button
+            class="w3-button w3-blue w3-margin"
+            id="part7"
+            onclick="part7()"
+          >
+            Completar la singularidad
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="lol hidden" id="lol">
+      <div class="espaciodetexto">
+        <p class="nt" id="demo"></p>
+        <img src="../nil.jpg" width="600" height="450" /> <br />
+        <button class="w3-button w3-red" id="nil" onclick="nil()">
+          Me temo que ahora solo quedó nada.
+        </button>
+        <script>
+          function nil() {
+            window.location.href = "../eden/eden.html";
+          }
+        </script>
+      </div>
+    </div>
+    <div class="lmao hidden" id="lmao">
+      <div class="espaciodetexto">
+        <p class="nt" id="demo2"></p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1499.1295178987104!2d-4.248554119915927!3d40.43115321373967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41af9c13d1b7b3%3A0x46dcb04c5e109910!2sINTA-NASA.%20Estacion%20Espacial%20de%20Madrid.%20Instalaciones%20de%20Robledo.!5e0!3m2!1ses-419!2sar!4v1700184044893!5m2!1ses-419!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <br />
+        <button class="w3-button w3-blue" id="all" onclick="al()">
+          Bienvenidos al Nuevo Mundo.
+        </button>
+
+        <script>
+          function al() {
+            window.location.href = "../part7/part7.html";
+          }
+        </script>
+      </div>
+    </div>
+    <script>
+      var speed = 50; /* The speed/duration of the effect in milliseconds */
+      var edenw = new Howl({
+        src: [
+          "../assets/part6/mus_barrier.ogg",
+          "../assets/part6/mus_barrier.mp3",
+        ],
+        volume: 0.1,
+        loop: true,
+      });
+      var part7w = new Howl({
+        src: [
+          "../assets/part6/mus_coretransition.ogg",
+          "../assets/part6/mus_coretransition.mp3",
+        ],
+        volume: 0.1,
+        loop: true,
+      });
+      function eden() {
+        $("#lol_hidden").addClass("hidden");
+        $("#lol").removeClass("hidden");
+        document.title = "nil";
+        edenw.play();
+        var i = 0;
+        var txt =
+          "La singularidad implosionó, y así lo hizo el incidente. Pero se trajo a nuestro mundo consigo."; /* The text */
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+      }
+      function part7() {
+        $("#lol_hidden").addClass("hidden");
+        $("#lmao").removeClass("hidden");
+        document.title = "Despierta.";
+        part7w.play();
+        var i = 0;
+        var txt =
+          "La singularidad explotó, dando lugar a la forma definitiva del incidente. Los miembros de LSDC han recobrado su consciencia en 28294 Robledo de Chavela, Madrid, España."; /* The text */
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo2").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        typeWriter();
+      }
+    </script>
+  </body>
+</html>
