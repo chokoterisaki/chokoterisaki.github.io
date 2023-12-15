@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROYECTO EFÍMERA</title>
+    <link rel="icon" href="../favicons/th123.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body
+    style="
+      background-image: url(../assets/eden/teexpoon-headphone-actor-final.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      image-rendering: pixelated;
+    "
+  >
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+      referrerpolicy="no-referrer"
+      src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+    ></script>
+    <div class="espaciodetexto">
+      <h1 style="color: aliceblue">
+        Edificio de Ensamblaje de Vehículos Aeronáuticos, momentos antes de la
+        Gran Implosión
+      </h1>
+      <video width="1280" height="720" controls>
+        <source src="../assets/eden/kagerou.mp4" type="video/mp4" />
+        Cargando video...
+      </video>
+      <button class="w3-button w3-blue" id="boton" onclick="cukenio()">
+        Volver a la parte 6
+      </button>
+      <script>
+        var boton = document.getElementById(boton);
+        function cukenio() {
+          window.location.href = "../part6/part6.html";
+        }
+      </script>
+    </div>
+  </body>
+</html>
