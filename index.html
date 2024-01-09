@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dreamcorp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="icon" href="nasa.ico" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+      }
+      .w3-row-padding img {
+        margin-bottom: 12px;
+      }
+      /* Set the width of the sidebar to 120px */
+      .w3-sidebar {
+        width: 120px;
+        background: #222;
+      }
+      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+      #main {
+        margin-left: 120px;
+      }
+      /* Remove margins from "page content" on small screens */
+      @media only screen and (max-width: 600px) {
+        #main {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+      <!-- Avatar image in top left corner -->
+      <img src="nasa.ico" style="width: 100%" />
+      <a
+        href="index.html"
+        class="w3-bar-item w3-button w3-padding-large w3-black"
+      >
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>INICIO</p>
+      </a>
+      <a
+        href="quests.html"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      >
+        <i class="fa fa-eye w3-xxlarge"></i>
+        <p>MISIONES</p>
+      </a>
+      <a
+        href="terminal.html"
+        class="w3-bar-item w3-button w3-padding-large w3-hover-black"
+      >
+        <i class="fa fa-code w3-xxlarge"></i>
+        <p>TERMINAL</p>
+      </a>
+    </nav>
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+      <div
+        class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small"
+      >
+        <a
+          href="index.html"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >INICIO</a
+        >
+        <a
+          href="quests.html"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >MISIONES</a
+        >
+        <a
+          href="terminal.html"
+          class="w3-bar-item w3-button"
+          style="width: 25% !important"
+          >TERMINAL</a
+        >
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+      <!-- Header/Home -->
+      <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+        <h1 class="w3-jumbo">DreamCorp</h1>
+        <p>Loop-Space Dream Corporation</p>
+        <img
+          src="nasa.ico"
+          alt="NASA"
+          class="w3-image"
+          width="128"
+          height="128"
+        />
+      </header>
+      <div class="w3-center w3-container">
+        <p>Historial de actualizaciones</p>
+        <br />
+        <h2>V3.0</h3>
+        <ul class="w3-ul">
+          <li>¡Lanzamiento inicial! APTO PARA MÓVILES</li>
+        </ul>
+      </div>
+      <!-- About Section -->
+      <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">Historia</h2>
+        <hr style="width: 200px" class="w3-opacity" />
+        <p>
+          <span class="w3-text-white">Dreamcorp®</span> nació a base del
+          Incidente de los Incidentes, ocurrido el 15 de diciembre de 20XX. En
+          el ocaso de aquel día, la conocida organización filial de la NASA
+          encargada del manejo de asuntos interestelares
+          <span class="w3-text-white">"La Sala de Comandos de la NASA"</span>
+          sufrió un accidente atómico que no solo eliminó de la faz del mundo a
+          las instalaciones de Langley y VAB (de sus siglas en inglés: Vehicle
+          Assembly Building), sino que conectó a nuestro mundo con infinitos
+          universos más allá de nuestro entendimiento por medio de agujeros de
+          gusano intangibles, es por ello que con ayuda de la tecnología por
+          excelencia de la sucesora y remediadora compañía
+          <span class="w3-text-white">"Loop-Space Dream Corporation"</span>, el
+          llamado <span class="w3-text-white">"Dream Core"</span> según su
+          creadora, podemos mantener a raya y a la vez, beneficiarnos del
+          conocimiento de este nuevo mundo que se nos ha abierto.
+        </p>
+        <h3 class="w3-padding-16 w3-text-light-grey">Objetivos</h3>
+        <hr style="width: 200px" class="w3-opacity" />
+        <ul class="w3-ul">
+          <li class="w3-text-white">
+            <span class="w3-badge">1</span>Investigar y documentar todos los
+            universos de interés posibles
+          </li>
+          <li class="w3-text-white">
+            <span class="w3-badge">2</span>Heredar el cargo de La Sala de
+            Comandos
+          </li>
+          <li class="w3-text-white">
+            <span class="w3-badge">3</span>Preservar nuestro pequeño mundo
+          </li>
+        </ul>
+        <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">11</span><br />
+            Miembros
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">4+</span><br />
+            Misiones en proceso
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge">∞</span><br />
+            Universos estimados
+          </div>
+          <div class="w3-quarter w3-section">
+            <span class="w3-xlarge" id="nbr">617</span><br />
+            Palóguilas
+          </div>
+          <script>
+            var speed = 1;
+
+            /* Call this function with a string containing the ID name to
+             * the element containing the number you want to do a count animation on.*/
+            function incEltNbr(id) {
+              elt = document.getElementById(id);
+              endNbr = Number(document.getElementById(id).innerHTML);
+              incNbrRec(0, endNbr, elt);
+            }
+
+            /*A recursive function to increase the number.*/
+            function incNbrRec(i, endNbr, elt) {
+              if (i <= endNbr) {
+                elt.innerHTML = i;
+                setTimeout(function () {
+                  //Delay a bit before calling the function again.
+                  incNbrRec(i + 1, endNbr, elt);
+                }, speed);
+              }
+            }
+
+            /*Function called on button click*/
+            function incNbr() {
+              incEltNbr("nbr");
+            }
+
+            incEltNbr(
+              "nbr"
+            ); /*Call this funtion with the ID-name for that element to increase the number within*/
+          </script>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+          <p class="w3-medium">
+            Powered by
+            <a
+              href="https://paloguilas-todo-sobre-ellas.webnode.es"
+              target="_blank"
+              class="w3-hover-text-green"
+              >PTSE</a
+            >
+          </p>
+          <!-- End footer -->
+        </footer>
+
+        <!-- END PAGE CONTENT -->
+      </div>
+    </div>
+  </body>
+</html>
