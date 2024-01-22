@@ -87,6 +87,15 @@
         <img class="w3-image" src="assets/1-0-1.png" />
         <p class="w3-text-green w3-xxlarge w3-padding-16">Welcome, manager.</p>
         <br />
+        <audio id="myaudio" controls >
+          <source src="assets/1-0.wav" type="audio/wav" />
+          Your browser does not support the audio element.
+        </audio>
+        <script>
+          var audio = document.getElementById("myaudio");
+          audio.volume = 0.1;
+        </script>
+        <br />
         <p class="w3-text-green w3-xxlarge w3-padding-16">
           This is your own, brand new office at Lobotomy Corporation Branch
           G-935.
@@ -128,7 +137,7 @@
           employees will be in charge of managing Abnormalities.
         </p>
         <p class="w3-text-green w3-xxlarge w3-padding-16">
-          It's about time to meet them. Shall we?
+          You'll meet them as you make your way through the different departments. Our branch consists of 4 of them: Control, Information, Safety and Welfare.
         </p>
       </article>
     </div>
