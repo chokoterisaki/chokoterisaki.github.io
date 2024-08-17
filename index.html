@@ -4,8 +4,22 @@
     <title>Dreamcorp</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="icon" href="nasa.ico" />
+=======
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="flipcard.css" />
+    <link
+      rel="icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mili_Logo.png/600px-Mili_Logo.png?20220531233153"
+    />
+>>>>>>> Stashed changes
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
@@ -14,57 +28,250 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-      body,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Montserrat", sans-serif;
-      }
-      .w3-row-padding img {
-        margin-bottom: 12px;
-      }
-      /* Set the width of the sidebar to 120px */
-      .w3-sidebar {
-        width: 120px;
-        background: #222;
-      }
-      /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-      #main {
-        margin-left: 120px;
-      }
-      /* Remove margins from "page content" on small screens */
-      @media only screen and (max-width: 600px) {
-        #main {
-          margin-left: 0;
-        }
-      }
-    </style>
   </head>
-  <body class="w3-black">
-    <h1>rebooting <span id="wait">.</span></h1>
-    
-
-<script>
-var dots = window.setInterval( function() {
-    var wait = document.getElementById("wait");
-    if ( wait.innerHTML.length > 3 ) 
-        wait.innerHTML = "";
-    else 
-        wait.innerHTML += ".";
-    }, 100);
-</script>
-<p class="w3-text"onclick="window.location.href='https://youtu.be/Xjts6vb48nE?si=eafOE_JFD-MiVLUE'">
-  6%
-</p>
-<p class="w3-text" onclick="window.location.href='https://youtu.be/oMjT4gfwXaI?si=Mwmg0yVfh9PgLvE-'">
-  1%
-</p>
-<p class="w3-text" onclick="window.location.href='https://youtu.be/kmI0_H3BWBE?si=8c-uK5Zf2YYXF4E7'">
-  7%
-</p>
+  <body class="p-3 mb-2 bg-black text-white">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <main>
+      <!--Asiyah-->
+      <div class="">
+        <h1 class="position-absolute text-success top-0">ASIYAH</h1>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <!--control-->
+              <div
+                class="card text-bg-dark position-absolute d-inline"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/MalkuthArmband.webp"
+                    />
+                    <span class="text-yellow">Control Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="">Dia 1</a></li>
+                  <li class="list-group-item"><a href="">Dia 2</a></li>
+                  <li class="list-group-item"><a href="">Dia 3</a></li>
+                  <!--day/1.html-->
+                </ul>
+              </div>
+              <!--control-->
+            </div>
+            <div class="col">
+              <!--information-->
+              <div
+                class="card text-bg-dark position-absolute d-inline"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/YesodArmband.webp"
+                    />
+                    <span class="text-yellow">Information Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--information-->
+            </div>
+            <div class="col">
+              <!--safety-->
+              <div
+                class="card text-bg-dark position-absolute d-inline"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/NetzachArmband.webp"
+                    />
+                    <span class="text-yellow">Safety Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--safety-->
+            </div>
+            <div class="col">
+              <!--training-->
+              <div
+                class="card text-bg-dark position-absolute d-inline"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/HodArmband.webp"
+                    />
+                    <span class="text-yellow">Training Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--training-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Asiyah-->
+      <!--Briah-->
+      <div class="top-50">
+        <h1 class="position-absolute text-warning top-50">BRIAH</h1>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <!--Welfare-->
+              <div
+                class="card text-bg-dark position-absolute d-inline top-50"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/ChesedArmband.webp"
+                    />
+                    <span class="text-blue">Welfare Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--welfare-->
+            </div>
+            <div class="col">
+              <!--discipline-->
+              <div
+                class="card text-bg-dark position-absolute d-inline top-50"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/GeburaArmband.webp"
+                    />
+                    <span class="text-yellow">Discipline Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--discipline-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Briah-->
+      <!--Atziluth-->
+      <div class="top-100">
+        <h1 class="position-absolute text-light top-100">ATZILUTH</h1>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <!--Record-->
+              <div
+                class="card text-bg-dark position-absolute d-inline top-100"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/HokmaArmband.webp"
+                    />
+                    <span class="text-blue">Record Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--Record-->
+            </div>
+            <div class="col">
+              <!--Extraction-->
+              <div
+                class="card text-bg-dark position-absolute d-inline top-100"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/BinahArmband.webp"
+                    />
+                    <span class="text-yellow">Extraction Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--Extraction-->
+            </div>
+            <div class="col">
+              <!--Architecture-->
+              <div
+                class="card text-bg-dark position-absolute d-inline top-100"
+                style="width: 18rem"
+              >
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-bg-dark">
+                    <img
+                      class="img-fluid"
+                      width="25"
+                      height="25"
+                      src="assets/armbands/KetherArmband.webp"
+                    />
+                    <span class="text-yellow">Architecture Team</span>
+                  </li>
+                  <li class="list-group-item"><a href="#">Dia 1</a></li>
+                  <li class="list-group-item"><a href="#">Dia 2</a></li>
+                  <li class="list-group-item"><a href="#">Dia 3</a></li>
+                </ul>
+              </div>
+              <!--Architecture-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Atziluth-->
+    </main>
+    <footer></footer>
   </body>
 </html>

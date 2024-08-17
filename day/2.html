@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>???</title>
+    <link rel="icon" href="../favicons/th03.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body class="gardenbody">
+    <main>
+      <script
+        crossorigin="anonymous"
+        integrity="sha512-yBpuflZmP5lwMzZ03hiCLzA94N0K2vgBtJgqQ2E1meJzmIBfjbb7k4Y23k2i2c/rIeSUGc7jojyIY5waK3ZxCQ=="
+        referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.slim.min.js"
+      ></script>
+      <script
+        crossorigin="anonymous"
+        integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA=="
+        referrerpolicy="no-referrer"
+        src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"
+      ></script>
+      <div id="center">
+        <div class="gardenroom" id="gardenroom_hidden">
+          <img
+            alt="Mysterious door"
+            class="gardenroom-bg"
+            src="../assets/garden/hidden.png"
+          />
+          <button id="gardenroom_door"></button>
+        </div>
+        <div class="gardenroom hidden" id="gardenroom">
+          <img
+            alt="The Garden Room"
+            class="gardenroom-bg"
+            src="../assets/garden/garden.png"
+          />
+          <a alt="Left door" href="azeroom.html" id="gardenroom_left"></a>
+          <a alt="Right door" href="eddroom.html" id="gardenroom_right"></a>
+          <a alt="Back door" href="niaroom.html" id="gardenroom_back"></a>
+          <button id="astolfo"></button>
+          <button id="aze"></button>
+          <button id="nia"></button>
+          <button id="edd"></button>
+          <button id="frontdoor"></button>
+          <p>BGM. "Haze" de Asunojokei</p>
+          <script>
+            $("p").on("click", function () {
+              $("p").fadeOut("slow");
+            });
+          </script>
+        </div>
+      </div>
+      <style>
+        .gardenbody {
+          background-color: black;
+          color: #ffffff;
+          font-family: "8bitOperatorPlus-Bold", monospace;
+          padding: 0;
+          margin: 0;
+        }
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        html {
+          position: relative;
+        }
+
+        a {
+          text-decoration: none;
+        }
+
+        body {
+          background-color: black;
+          color: #ffffff;
+          font-family: "8bitOperatorPlus-Bold", monospace;
+          padding: 0;
+          margin: 0;
+        }
+
+        .hidden {
+          display: none !important;
+        }
+
+        #center {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        #ytand {
+          position: relative;
+          display: grid;
+          width: 100vw;
+          height: 100vh;
+          margin: 0;
+          color: #353535;
+          place-items: center center;
+        }
+
+        #ytand #image {
+          width: 100vw;
+          height: 100vh;
+          background-repeat: repeat;
+        }
+
+        #ytand #text {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 810px;
+          z-index: 10;
+          text-align: center;
+          font-family: Tahoma, sans-serif;
+        }
+
+        #ytand #text div {
+          position: absolute;
+          width: 810px;
+        }
+        .gardenroom {
+          position: relative;
+        }
+
+        .gardenroom-bg {
+          width: 100%;
+          image-rendering: pixelated;
+          pointer-events: none;
+        }
+
+        #gardenroom_door {
+          position: absolute;
+          left: 47%;
+          top: 87%;
+          width: 6%;
+          height: 13%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+
+        #gardenroom_left {
+          position: absolute;
+          left: 28%;
+          top: 42%;
+          width: 5%;
+          height: 15%;
+        }
+
+        #gardenroom_right {
+          position: absolute;
+          right: 27%;
+          top: 43%;
+          width: 6%;
+          height: 14%;
+        }
+
+        #gardenroom_back {
+          position: absolute;
+          right: 47%;
+          top: 81%;
+          width: 6%;
+          height: 12%;
+        }
+        #astolfo {
+          position: absolute;
+          left: 47%;
+          top: 24%;
+          width: 6%;
+          height: 13%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #aze {
+          position: absolute;
+          left: 40%;
+          top: 43%;
+          width: 5%;
+          height: 13%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #nia {
+          position: absolute;
+          left: 46%;
+          top: 44%;
+          width: 7%;
+          height: 11%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #edd {
+          position: absolute;
+          left: 55%;
+          top: 44%;
+          width: 6%;
+          height: 11%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+        #frontdoor {
+          position: absolute;
+          left: 45%;
+          top: 0%;
+          width: 10%;
+          height: 11%;
+          cursor: pointer;
+          background: none;
+          border: none;
+        }
+      </style>
+      <script>
+        var gardenroom = new Howl({
+          src: ["../assets/garden/garden.ogg", "../assets/garden/garden.mp3"],
+          volume: 0.2,
+          loop: true,
+        });
+        $(document).on("click", "#gardenroom_door", function () {
+          $("#gardenroom_hidden").addClass("hidden");
+          $("#gardenroom").removeClass("hidden");
+          gardenroom.play();
+          document.title = "Gengetsu";
+        });
+        $(document).on("click", "#astolfo", function () {
+          alert(
+            "¡Bienvenidos al Hall del Jardín del Edén! Por favor, encuentren las 3 letras escondidas en cada habitación para introducirlos en la puerta frontal y acceder al laboratorio."
+          );
+        });
+        $(document).on("click", "#aze", function () {
+          alert("Aw. Yo voy por la puerta izquierda");
+        });
+        $(document).on("click", "#nia", function () {
+          alert(":v. Yo ire por la puerta de abajo");
+        });
+        $(document).on("click", "#edd", function () {
+          alert("Ayps. Pues yo la de la derecha.");
+        });
+        $(document).on("click", "#frontdoor", function () {
+          var contraseña = prompt("¿Cuál es la contraseña? ¡EN MAYÚSCULAS!");
+
+          if (
+            contraseña == "PTA" //OYE! ESO ES TRAMPA! Ya que estas, por lo menos escucha un poco de Ken Ashcorp.
+          ) {
+            alert("✅ Bienvenido, MATI.");
+            window.location.href = "../langley/part4.html";
+          } else {
+            alert("❌ Acceso no autorizado.");
+          }
+        });
+      </script>
+      <script
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/v2cb3a2ab87c5498db5ce7e6608cf55231689030342039"
+        integrity="sha512-DI3rPuZDcpH/mSGyN22erN5QFnhl760f50/te7FTIYxodEF8jJnSFnfnmG/c+osmIQemvUrnBtxnMpNdzvx1/g=="
+        data-cf-beacon='{"rayId":"7eb472fcec40200d","version":"2023.4.0","r":1,"token":"377f50f2716b474ea394c9bbd3aaef87","si":100}'
+        crossorigin="anonymous"
+      ></script>
+    </main>
+  </body>
+</html>
