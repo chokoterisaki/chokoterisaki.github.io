@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>C4-3</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="../player.css" rel="stylesheet" />
+    <style>
+      @font-face {
+        font-family: "higu"; /*a name to be used later*/
+        src: url("assets/std.otf"); /*URL to font*/
+      }
+      .lol {
+        font-family: higu;
+      }
+    </style>
+    <style>
+      .book-page {
+        max-width: 600px; /* Ancho máximo de la "página" */
+        margin: 0 auto; /* Centrar el contenedor */
+        padding: 10px;
+        text-align: justify; /* Justifica el texto */
+        border-radius: 5px; /* Bordes redondeados */
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <main class="text-center top-50">
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "El caso de Nora. Para este, no creo que necesites diagrama."
+      </p>
+      <hr class="text-white" />
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "Este particularmente me dio la mayor pena, he de decir. Tuve que
+        recurrir a la técnica más tramposa, la de apuñalar por la espalda."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "De lo que recogisteis, la herida fue hecha por algo como una lanza.
+        Probablemente el Laevateinn, portada en sus tiempos por Aze, lo cual lo
+        hizo un potencial sospechoso o por lo menos mente maestra."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "El cuerpo fue hallado en una de las habitacion de arriba, la de
+        botánica. Específicamente, acostado sobre la tierra de las plantaciones
+        de bambúes rotos que la cubrían."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "Antes del descubrimiento del cuerpo, la puerta de la habitación tuvo
+        que ser abierta por la fuerza pues llevaba un candado de cuya llave me
+        deshice."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "Es una habitación del tamaño de 2 ambientes, los únicos accesos son la
+        susodicha puerta y una única gran ventana que da una vista al oeste de
+        la isla. Eso es todo."
+      </p>
+      <footer class="text-center position-relative">
+        <div id="SP-tv" class="StarrPlayer">
+          <div
+            class="SP-track-info"
+            style="background-image: url(../mp3/truth.jpg)"
+          >
+            <div class="SP-track">
+              <span class="SP-track-name text-white">???</span>
+            </div>
+            <div class="SP-artist text-white">
+              Original:<span class="SP-artist-name">???</span>
+            </div>
+            <div class="SP-duration text-white">
+              <span class="SP-duration-current"> 0:00 </span>
+              <span class="SP-duration-total"> X:XX </span>
+            </div>
+            <div class="SP-progress-bar">
+              <div class="SP-progress-bar-fill">
+                <div class="SP-progress-bar-knob"></div>
+              </div>
+            </div>
+          </div>
+          <div class="SP-button-row">
+            <div class="SP-prev SP-button">&lt;&lt;</div>
+            <div class="SP-play SP-button">Play</div>
+            <div class="SP-pause SP-button">Pause</div>
+            <div class="SP-stop SP-button">Stop</div>
+            <div class="SP-next SP-button">&gt;&gt;</div>
+          </div>
+        </div>
+        <script>
+          // This component is where the magic happens!
+          // You shouldn't need to modify this unless you are adding new features! >🐢
+          class MusicPlayer {
+            constructor(element, song_data) {
+              this.parent_element = element;
+              this.audio = null;
+              this.current_track_index = -1;
+              this.track_element =
+                this.parent_element.querySelector(".SP-track-name");
+              this.track_scrolling_left = true;
+              this.artist_element =
+                this.parent_element.querySelector(".SP-artist-name");
+              this.artist_scrolling_left = true;
+              this.song_data = song_data;
+              this.isDragging = false;
+              this.start();
+            }
+
+            start = () => {
+              this.initializeButtons();
+              this.initializeStatefulRenderingInterval();
+              this.initializeProgressBar();
+            };
+
+            initializeStatefulRenderingInterval = () => {
+              setInterval(() => {
+                this.scrollTrackText();
+                this.scrollArtistText();
+                this.updateProgressBar(
+                  this.getSongProgressPercent(this.audio) * 100
+                );
+                this.updateProgressText(this.audio);
+                this.updateDurationText(this.audio);
+                this.renderPauseOrPlayButton();
+              }, 50);
+            };
+
+            initializeButtons = () => {
+              let buttons = this.parent_element.querySelectorAll(".SP-button");
+              buttons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                  switch (true) {
+                    case event.target.classList.contains("SP-play"):
+                      this.play_song();
+                      break;
+                    case event.target.classList.contains("SP-pause"):
+                      this.pause_song();
+                      break;
+                    case event.target.classList.contains("SP-next"):
+                      this.next_song();
+                      break;
+                    case event.target.classList.contains("SP-prev"):
+                      this.prev_song();
+                      break;
+                    case event.target.classList.contains("SP-stop"):
+                      this.stop_song();
+                      break;
+                    default:
+                      break;
+                  }
+                });
+              });
+            };
+
+            initializeProgressBar = () => {
+              let progressKnob = this.parent_element.querySelector(
+                ".SP-progress-bar-knob"
+              );
+              let progressBar =
+                this.parent_element.querySelector(".SP-progress-bar");
+              progressKnob.addEventListener("pointerdown", (event) => {
+                this.isDragging = true;
+                event.preventDefault();
+              });
+
+              this.parent_element.addEventListener("pointermove", (event) => {
+                if (!this.isDragging || !this.audio) return;
+                const boundingRect = progressBar.getBoundingClientRect();
+                let percent =
+                  (event.clientX - boundingRect.left) / boundingRect.width;
+                percent = Math.max(0, Math.min(1, percent));
+                this.audio.currentTime = this.audio.duration * percent;
+                this.updateProgressBar(percent * 100);
+              });
+              document.addEventListener("pointerup", () => {
+                this.isDragging = false;
+              });
+
+              progressBar.addEventListener("click", (event) => {
+                if (this.audio == null || this.isDragging) return; // Skip if dragging or audio is not initialized
+                const bounding = progressBar.getBoundingClientRect();
+                const percent =
+                  (event.clientX - bounding.left) / bounding.width;
+                this.audio.currentTime = this.audio.duration * percent;
+                this.updateProgressBar(percent * 100);
+              });
+            };
+
+            play_song = (track_number) => {
+              // If the audio is paused and the track number is the same as the current track, just resume playing
+              if (
+                this.audio &&
+                this.audio.paused &&
+                (track_number === this.current_track_index ||
+                  track_number == null)
+              ) {
+                this.audio.play();
+                return;
+                // If the audio is playing, but the play button is pressed, pause the audio
+              } else if (this.audio && track_number == null) {
+                this.audio.pause();
+                return;
+              }
+              // Loop the song list if the track number is out of bounds
+              if (!track_number && this.current_track_index === -1) {
+                track_number = 0;
+              } else if (track_number >= this.song_data.length) {
+                track_number = 0;
+              } else if (track_number < 0) {
+                track_number = this.song_data.length - 1;
+              }
+
+              // Stop the current song if it is playing
+              if (this.audio && !this.audio.paused) {
+                this.stop_song();
+              }
+
+              // Play the song
+              let song_url = this.song_data[track_number].url;
+              this.parent_element.querySelector(".SP-track-name").innerHTML =
+                this.song_data[track_number].name;
+              this.parent_element.querySelector(".SP-artist-name").innerHTML =
+                this.song_data[track_number].artist;
+              this.audio = new Audio(song_url);
+              this.audio.addEventListener("ended", () => {
+                this.audio.currentTime = 0;
+                this.next_song();
+              });
+              this.audio.play();
+              this.current_track_index = track_number;
+            };
+
+            pause_song = () => {
+              this.audio.pause();
+            };
+
+            next_song = () => {
+              let next_track_number = this.current_track_index + 1;
+              if (next_track_number >= this.song_data.length) {
+                next_track_number = 0;
+              }
+              this.audio.pause();
+            };
+
+            prev_song = () => {
+              let prev_track_number = this.current_track_index - 1;
+              if (prev_track_number < 0) {
+                prev_track_number = this.song_data.length - 1;
+              }
+
+              this.play_song(prev_track_number);
+            };
+
+            stop_song = () => {
+              this.audio.pause();
+              this.audio = null;
+              this.current_track_index = -1;
+            };
+
+            getSongProgressString = (audio_object) => {
+              if (!audio_object) {
+                return "0:00";
+              }
+              const current_time = audio_object.currentTime || 0;
+              return `${Math.floor(current_time / 60)}:${Math.floor(
+                current_time % 60
+              )
+                .toString()
+                .padStart(2, "0")}`;
+            };
+
+            getSongDurationString = (audio_object) => {
+              if (!audio_object) {
+                return "0:00";
+              }
+              const duration = audio_object.duration || 0;
+              return `${Math.floor(duration / 60)}:${Math.floor(duration % 60)
+                .toString()
+                .padStart(2, "0")}`;
+            };
+
+            updateDurationText = (audio_object) => {
+              let progressText =
+                this.parent_element.querySelector(".SP-duration-total");
+              progressText.innerHTML = this.getSongDurationString(audio_object);
+            };
+
+            updateProgressText = (audio_object) => {
+              let progressText = this.parent_element.querySelector(
+                ".SP-duration-current"
+              );
+              progressText.innerHTML = this.getSongProgressString(audio_object);
+            };
+
+            getSongProgressPercent = (audio_object) => {
+              if (audio_object == null) return 0;
+              const currentTime = audio_object.currentTime;
+              const duration = audio_object.duration;
+              return currentTime / duration;
+            };
+
+            updateProgressBar = (progressFloat) => {
+              let progressTruncated = progressFloat.toFixed(2);
+              let progressBar = this.parent_element.querySelector(
+                ".SP-progress-bar-fill"
+              );
+              progressBar.style.width = progressTruncated + "%";
+            };
+
+            // This function scrolls the track text in the player when it is too long to fit in the container
+            scrollTrackText = () => {
+              if (
+                this.track_element.scrollWidth >
+                  this.track_element.clientWidth +
+                    this.track_element.scrollLeft &&
+                this.track_scrolling_left
+              ) {
+                this.track_element.scrollBy(1, 0);
+              } else {
+                this.track_scrolling_left = false;
+              }
+              if (!this.track_scrolling_left) {
+                this.track_element.scrollBy(-0.5, 0);
+                if (this.track_element.scrollLeft === 0) {
+                  this.track_scrolling_left = true;
+                }
+              }
+            };
+
+            // This function scrolls the artist text in the player when it is too long to fit in the container
+            scrollArtistText = () => {
+              if (
+                this.artist_element.scrollWidth >
+                  this.artist_element.clientWidth +
+                    this.artist_element.scrollLeft &&
+                this.artist_scrolling_left
+              ) {
+                this.artist_element.scrollBy(1, 0);
+              } else {
+                this.artist_scrolling_left = false;
+              }
+              if (!this.artist_scrolling_left) {
+                this.artist_element.scrollBy(-0.5, 0);
+                if (this.artist_element.scrollLeft === 0) {
+                  this.artist_scrolling_left = true;
+                }
+              }
+            };
+
+            // This hides the play button when the audio is playing and hides the pause button when the audio is paused
+            renderPauseOrPlayButton = () => {
+              let play_button = this.parent_element.querySelector(".SP-play");
+              let pause_button = this.parent_element.querySelector(".SP-pause");
+              if (this.audio && !this.audio.paused) {
+                play_button.style.display = "none";
+                pause_button.style.display = "block";
+              } else {
+                play_button.style.display = "block";
+                pause_button.style.display = "none";
+              }
+            };
+          }
+          // Song files hosted on github >🐢
+          let song_data_absolute = [
+            {
+              name: "truth",
+              artist: "worldenddominator",
+              url: "../mp3/wed.mp3",
+            },
+          ];
+          // Song files hosted on nekoweb >🐢
+          let song_data_relative = [
+            {
+              name: "truth",
+              artist: "worldenddominator",
+              url: "../mp3/wed.mp3",
+            },
+          ];
+
+          // Automatically initialize all song players on the page with the same data >🐢
+          // let song_player_elements = document.querySelectorAll(".StarrPlayer");
+          // let audio_players = [];
+
+          // song_player_elements.forEach((element) => {
+          //     let audio_player = new MusicPlayer(element, song_data_relative);
+          //     audio_players.push(audio_player);
+          // });
+
+          // Load the song players manually >🐢
+          let song_player_basic = document.querySelector(".StarrPlayer");
+          let basic_player = new MusicPlayer(
+            song_player_basic,
+            song_data_relative
+          );
+
+          // This one loads from github via an absolute path >🐢
+          let song_player_stone = document.querySelector(
+            "#SP-stone.StarrPlayer"
+          );
+          let stone_player = new MusicPlayer(
+            song_player_stone,
+            song_data_absolute
+          );
+
+          // This one loads from nekoweb via a relative path >🐢
+          let song_player_tv = document.querySelector("#SP-tv.StarrPlayer");
+          let tv_player = new MusicPlayer(song_player_tv, song_data_relative);
+        </script>
+      </footer>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Hmm... este es realmente difícil de explicar."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "¿Qué tan probable es que Aze haya sido? No tiene semejantes poderes
+        mágicos, y no parecía que la entrada secreta donde estaba habia sido
+        usada recientemente."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Además, quizás haya muerto luego de que llegáramos y antes del
+        asesinato de Nora."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Quienes estaban en la mansión en ese momento eran los asistentes. Bauti
+        no utilizó su arma, pero pudo haber usado el Laevateinn, aunque nunca
+        supimos dónde quedó ni donde se lo guardaba, ni siquiera sabemos si
+        estuvo ahi en primer lugar."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Despues, la razón por la que Nora estaba ahi sola era porque fue a
+        buscar algo suyo. Esa habitación no tiene nada que ver con ella y estaba
+        cerrada, y si los asistentes son de fiar, no habrian manipulado nada de
+        esa habitación durante o antes del asesinato. Dicho así, supongamos que
+        el asesinato no ocurrió alli."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Nora habria sido asesinada en algun lugar de la mansión y luego
+        ocultada en aquel jardín."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Fox... ¿puedo tomar un comodín más?."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "Para este caso solo te puedo decir que no hay ninguna lanza aparte de
+        las que mencionamos en la mansión."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Eso parece tener alguna trampa, pero bueno. Lo tendré en cuenta."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Otra forma de encarar el caso es por la ventana. Estaba abierta cuando
+        entramos, asi que el culpable pudo haberla utilizado para... ¿entrar,
+        salir, o tirar algo? No sé si algo de eso es lógico aqui."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Con esas cosas aclaradas, solo queda algo que me llamó la atención.
+        ¿Por qué en los bambués? Es un espacio en el centro de las plantas, casi
+        sin ocultar el cuerpo del todo. No creo que alguien no-mágico se
+        arriesgara a dejar que descubran el cuerpo y no haber aprovechado ese
+        tiempo para algo."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Espera, ahora que lo pienso... Fox, dijiste que eran brotes rotos,
+        ¿pero no eran recien crecidos y ya?."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Eso de que estén rotos deja una nueva posibilidad. Uno podría tomar un
+        bambú para cortarlo y fabricar un arma. ESA pudo haber sido la verdadera
+        lanza, y eso habria hecho más facil ocultarla, dejandola entre los
+        bambués adyacentes a Nora o algo asi."
+      </p>
+      <p
+      class="book-page"
+      style="
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rebeccapurple;
+      "
+    >
+      "Eso podría resolver la incógnita del Laevateinn."
+    </p>
+      <p class="text-white book-page" style="font-family: 'monospace;'">
+        Justo cuando pensé que me encontraba en un camino sin salida, recordé
+        las palabras de Nia tras ejercer como fiscal en uno de los juicios,
+        actividad típica de LSDC.
+      </p>
+      <p class="text-white book-page" style="font-family: 'monospace;'">
+        Turnabout. Que palabra rara. A veces es traducida como 'caso', pero con
+        Aze siempre creímos que una traducción más literal era... como...
+        ¿'vuelta 360°'?
+      </p>
+      <p class="text-white book-page" style="font-family: 'monospace;'">
+        ¡EH! Eso es, solo tengo que darle la vuelta al tablero, y...
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "¿Cómo lo habria hecho el culpable si estaba afuera?"
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Meter las manos lo suficiente como para maniobrar el hilo sería un poco
+        imposible, como ya concluí, pero lo que sí puede ocurrir es que el hilo
+        ya esté atravesando la ventana, aunque en ese caso sería un poco
+        inútil."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Excepto que estuviera siendo tensionado"
+      </p>
+      <img class="position-relative" width="512" src="../assets/1b.png" />
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Entonces, quizás no de la manera ilustrada, pero mas o menos colocándo
+        el largo del hilo por entre la zona vulnerable y sostenido por alguien
+        desde la ventana..."
+      </p>
+      <img class="position-relative" width="512" src="../assets/1c.jpg" />
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Al soltarse los puntos desde donde el hilo se estaba sosteniendo del
+        lado de adentro, rápidamente se llevarían a cualquier cosa en su radio
+        hasta la ventana donde estaría el culpable, quien necesitaria aplicar
+        fuerza para tirar de la cuerda, asfixiarlo y que todo esto funcione."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Esa es una manera en la que un humano podría hacerlo."
+      </p>
+
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "Ah... cierto. No creo que Leros se haya encerrado a si mismo ni que el
+        culpable lo haya hecho, ya que ni siquiera tenía la llave. La tenía..."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "La dependienta. Oh, pero si fueramos a inculparla, eso también sería
+        raro de encajar. Despues de todo, siempre estuvo dentro del local donde
+        estaban Edd y Mati, y el baño no tiene otras entradas aparte de la
+        ventana, ¿verdad?"
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "..."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "Eso solo nos deja una respuesta: fue obra de magia."
+      </p>
+      <p
+        class="text-success book-page"
+        style="
+          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+            'Lucida Sans', Arial, sans-serif;
+        "
+      >
+        "E-espera..."
+      </p>
+      <p
+        class="book-page"
+        style="
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          color: rebeccapurple;
+        "
+      >
+        "No te preocupes, has estado tan cerca que te daré otra oportunidad.
+        Pero tú decides si gastarla en seguir este caso desde donde lo dejaste o
+        ir directo al siguiente."
+      </p>
+      <p class="text-white book-page" style="font-family: 'monospace;'">
+        No me podía arriesgar, asi que por ahora, mejor probaría con otro caso.
+      </p>
+    </main>
+    <div class="text-center">
+      <button
+        class="btn btn-light mb-5"
+        onclick="window.location.href='1.html'"
+      >
+        volver
+      </button>
+      <button
+        class="btn btn-danger mb-5"
+        onclick="window.location.href='3.html'"
+      >
+        literalmente siguiente
+      </button>
+    </div>
+  </body>
+</html>
