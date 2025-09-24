@@ -1,0 +1,12 @@
+@font-face {
+  font-family: ryufont;
+  src: url(../assets/fonts/sazanami-gothic.ttf);
+}
+
+.ryufont {
+  font-family: ryufont;
+}
+
+.scarlet{
+    color:#FD2D1C
+}
